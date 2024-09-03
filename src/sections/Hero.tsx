@@ -87,8 +87,8 @@ export const HeroSection = () => {
             <ArrowDown className="size-4" />
           </button>
           <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-lg">
-            <span>👋</span>
-            <span className="font-semibold">Let&apos;s Connect</span>
+            <span>👇🏽</span>
+            <span className="font-semibold">Download CV</span>
           </button>
         </div>
       </div>
