@@ -44,6 +44,18 @@ const portfolioProjects = [
     link: "https://youtu.be/Z7I5uSRHMHg",
     image: aiStartupLandingPage,
   },
+  {
+    company: "Quantum Dynamics",
+    year: "2023",
+    title: "AI Startup Landing Page",
+    results: [
+      { title: "Enhanced user experience by 40%" },
+      { title: "Improved site speed by 50%" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://youtu.be/Z7I5uSRHMHg",
+    image: aiStartupLandingPage,
+  },
 ];
 
 export const ProjectsSection = () => {
@@ -67,7 +79,7 @@ export const ProjectsSection = () => {
             <div
               key={project.title}
               className="bg-gray-800 rounded-3xl z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 pt-8 md:pt-12 md:px-10 after:pointer-events-none lg:pt-16 lg:px-20 sticky"
-              style={{ top: `calc(64px + ${projectIndex * 40}px)` }}
+              style={{ top: `calc(64px + ${projectIndex * 65}px)` }}
             >
               <div
                 className="absolute inset-0 -z-10 opacity-5"
