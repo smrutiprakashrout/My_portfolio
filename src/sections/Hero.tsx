@@ -5,6 +5,7 @@ import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import HeroOrbit from "@/components/HeroOrbit";
 import SpsrkleIcon from "@/assets/icons/sparkle.svg";
+import Link from "next/link";
 
 export const HeroSection = () => {
   return (
@@ -77,13 +78,17 @@ export const HeroSection = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
-            <span className="font-semibold">Explore My work</span>
+          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl z-0">
+            <span className="font-semibold cursor-pointer">
+              <Link href="#project">Explore My work</Link>
+            </span>
             <ArrowDown className="size-4" />
           </button>
-          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-lg">
+          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-lg cursor-pointer z-0">
             <span>👇🏽</span>
-            <span className="font-semibold">Download CV</span>
+            <span className="font-semibold">
+              <Link href="./My_Resume.pdf">Download CV</Link>
+            </span>
           </button>
         </div>
       </div>
