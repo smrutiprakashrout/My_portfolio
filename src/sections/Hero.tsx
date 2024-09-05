@@ -56,7 +56,7 @@ export const HeroSection = () => {
         </HeroOrbit>
       </div>
 
-      <div className="container">
+      <div className="container -mt-6">
         <div className="flex flex-col items-center">
           <Image src={memojiImage} className="size-[100px]" alt=""></Image>
           <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
