@@ -56,7 +56,7 @@ export const HeroSection = () => {
         </HeroOrbit>
       </div>
 
-      <div className="container -mt-6">
+      <div className="container sm: -mt-6">
         <div className="flex flex-col items-center">
           <Image src={memojiImage} className="size-[100px]" alt=""></Image>
           <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
@@ -75,7 +75,7 @@ export const HeroSection = () => {
           <h1 className="font-serif text-3xl md:text-5xl  text-center mt-8 tracking-wide">
             Building Exceptional User Experiences
           </h1>
-          <p className="mt-4 text-center text-white/60 md:text-lg">
+          <p className="mt-4 text-center text-white/60 md:text-lg text-sm px-4">
             I specialize in transforming design into functional, high-performing
             web applications. Let&apos;s discuss your next project.
           </p>
