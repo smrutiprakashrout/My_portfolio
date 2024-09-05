@@ -9,9 +9,9 @@ import GrainImage from "@/assets/images/grain.jpg";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "Project_1",
+    year: "2023",
+    title: "Foodlane",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
@@ -21,9 +21,9 @@ const portfolioProjects = [
     image: darkSaasLandingPage,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "Project_2",
+    year: "2023",
+    title: "StrmFlux",
     results: [
       { title: "Boosted sales by 20%" },
       { title: "Expanded customer reach by 35%" },
@@ -33,9 +33,9 @@ const portfolioProjects = [
     image: lightSaasLandingPage,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "Project_3",
+    year: "2024",
+    title: "PostSphere",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
@@ -45,9 +45,9 @@ const portfolioProjects = [
     image: aiStartupLandingPage,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "Project_4",
+    year: "2024",
+    title: "Photography Portfolio",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
@@ -87,7 +87,7 @@ export const ProjectsSection = () => {
               ></div>
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
-                  <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
+                  <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text gap-2">
                     <span>{project.company}</span>
                     <span>{project.year}</span>
                   </div>
