@@ -69,7 +69,7 @@ export const HeroSection = () => {
           </div>
         </div>
         <div className="text-center flex px-6 gap-3">
-        <span className="text-white/80 font-bold font-sans text-sm pt-2">👋🏻 Hey, I&apos;m Smruti, a Fullstack Developer based in India.</span>
+        <span className="text-white/80 font-bold font-sans text-sm pt-2 w-full">👋🏻 Hey, I&apos;m Smruti, a Fullstack Developer based in India.</span>
         </div>
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl  text-center mt-8 tracking-wide">
