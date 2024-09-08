@@ -1,6 +1,6 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import darkSaasLandingPage from "@/assets/images/—Pngtree—macbook pro 16_9011850.png";
+import lightSaasLandingPage from "@/assets/images/weather.png";
+import aiStartupLandingPage from "@/assets/images/photoport.png";
 import { Result } from "postcss";
 import Image from "next/image";
 import CheckIcon from "@/assets/icons/check-circle.svg";
@@ -9,51 +9,48 @@ import GrainImage from "@/assets/images/grain.jpg";
 
 const portfolioProjects = [
   {
-    company: "Project_1",
+    company: "Foodlane",
     year: "2023",
-    title: "Foodlane",
+    title: "Restaurant Management System",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
+    link: "https://food-lane-puce.vercel.app/",
     image: darkSaasLandingPage,
   },
   {
-    company: "Project_2",
+    company: "StrmFlux",
     year: "2023",
-    title: "StrmFlux",
+    title: "React Weather App",
     results: [
       { title: "Boosted sales by 20%" },
       { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
+    link: "https://react-weather-six-rho.vercel.app/",
     image: lightSaasLandingPage,
   },
+  // {
+  //   company: "Project_3",
+  //   year: "2024",
+  //   title: "PostSphere",
+  //   results: [
+  //     { title: "Enhanced user experience by 40%" },
+  //     { title: "Improved site speed by 50%" },
+  //     { title: "Increased mobile traffic by 35%" },
+  //   ],
+  //   link: "https://youtu.be/Z7I5uSRHMHg",
+  //   image: aiStartupLandingPage,
+  // },
   {
-    company: "Project_3",
-    year: "2024",
-    title: "PostSphere",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
-  },
-  {
-    company: "Project_4",
+    company: "Bhabyasight",
     year: "2024",
     title: "Photography Portfolio",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "https://bhabyaphotography.vercel.app/",
     image: aiStartupLandingPage,
   },
 ];
