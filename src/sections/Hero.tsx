@@ -90,7 +90,7 @@ export const HeroSection = () => {
           <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-lg cursor-pointer z-0">
             <span>👇🏽</span>
             <span className="font-semibold">
-              <Link href="./My_Resume.pdf">Download CV</Link>
+              <Link href="./Smruti_Prakash_Rout_Resume.pdf">Download CV</Link>
             </span>
           </button>
         </div>

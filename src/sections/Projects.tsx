@@ -6,52 +6,93 @@ import Image from "next/image";
 import CheckIcon from "@/assets/icons/check-circle.svg";
 import Arrowup from "@/assets/icons/arrow-up-right.svg";
 import GrainImage from "@/assets/images/grain.jpg";
+// ----------------------------project-----------------------
+import Nebulashade from "@/assets/images/projects/nebulashade.png";
+import Lifehrsision from "@/assets/images/projects/lifehrfusion.png";
+import Devnest from "@/assets/images/projects/devnest.png";
+import Kernelhub from "@/assets/images/projects/kernelhub.png";
+import Photography from "@/assets/images/projects/photography.png";
+import Resturant from "@/assets/images/projects/resturant.png";
+import Weather from "@/assets/images/projects/weather.png";
 
 const portfolioProjects = [
   {
-    company: "Foodlane",
-    year: "2023",
-    title: "Restaurant Management System",
+    company: "NebulaShade",
+    year: "2025",
+    title: "Dynamic Desktop Aesthetic Toolkit",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-    ],
-    link: "https://food-lane-puce.vercel.app/",
-    image: darkSaasLandingPage,
-  },
-  {
-    company: "StrmFlux",
-    year: "2023",
-    title: "React Weather App",
-    results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
+      { title: "Enabled full desktop theming synced with wallpaper colors" },
+      { title: "Reduced setup time by 60% with one-click theme restore" },
     ],
     link: "https://react-weather-six-rho.vercel.app/",
-    image: lightSaasLandingPage,
+    image: Nebulashade,
   },
-  // {
-  //   company: "Project_3",
-  //   year: "2024",
-  //   title: "PostSphere",
-  //   results: [
-  //     { title: "Enhanced user experience by 40%" },
-  //     { title: "Improved site speed by 50%" },
-  //     { title: "Increased mobile traffic by 35%" },
-  //   ],
-  //   link: "https://youtu.be/Z7I5uSRHMHg",
-  //   image: aiStartupLandingPage,
-  // },
+  {
+    company: "Devnest",
+    year: "2025",
+    title: "One-Click Dev Workstation Setup",
+    results: [
+      { title: "Cut developer environment setup time from days to minutes" },
+      {
+        title:
+          "Integrated essential tools, extensions, Apps and configs out-of-the-box",
+      },
+    ],
+    link: "https://react-weather-six-rho.vercel.app/",
+    image: Devnest,
+  },
+  {
+    company: "LifeHrfusion",
+    year: "2025",
+    title: "Next-Gen Workforce Management",
+    results: [
+      {
+        title:
+          "Automated payroll and tax calculations, reducing manual work by 70%",
+      },
+      {
+        title:
+          "Improved employee self-service with real-time profile and leave updates",
+      },
+    ],
+    link: "https://react-weather-six-rho.vercel.app/",
+    image: Lifehrsision,
+  },
+  {
+    company: "KernelHub",
+    year: "2024",
+    title: "Linux & Open Source News Platform",
+    results: [
+      {
+        title:
+          "Aggregated kernel, distro, and app updates in a unified dashboard",
+      },
+      { title: "Engaged 5K+ monthly readers from the open-source community" },
+    ],
+    link: "https://react-weather-six-rho.vercel.app/",
+    image: Kernelhub,
+  },
   {
     company: "Bhabyasight",
     year: "2024",
-    title: "Photography Portfolio",
+    title: "Photography Portfolio Website",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
+      { title: "Enhanced visual presentation with responsive galleries" },
+      { title: "Improved page load time by 50%" },
     ],
     link: "https://bhabyaphotography.vercel.app/",
-    image: aiStartupLandingPage,
+    image: Photography,
+  },
+  {
+    company: "Foodlane",
+    year: "2023",
+    title: "Smart Restaurant Management System",
+    results: [
+      { title: "Reduced order processing time by 45%" },
+      { title: "Digitized kitchen workflows and improved analytics" },
+    ],
+    link: "https://food-lane-puce.vercel.app/",
+    image: Resturant,
   },
 ];
 
