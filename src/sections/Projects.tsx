@@ -14,21 +14,27 @@ import Kernelhub from "@/assets/images/projects/kernelhub.png";
 import Photography from "@/assets/images/projects/photography.png";
 import Resturant from "@/assets/images/projects/resturant.png";
 import Weather from "@/assets/images/projects/weather.png";
+import { FaDownload } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
+
 
 const portfolioProjects = [
   {
-    company: "NebulaShade",
+    name: "NebulaShade",
     year: "2025",
     title: "Dynamic Desktop Aesthetic Toolkit",
     results: [
       { title: "Enabled full desktop theming synced with wallpaper colors" },
       { title: "Reduced setup time by 60% with one-click theme restore" },
     ],
-    link: "https://react-weather-six-rho.vercel.app/",
+    link: "",
     image: Nebulashade,
+    isapp: true,
+    isweb: false,
+    github: "https://github.com/smrutiofficial/Nebulashade",
   },
   {
-    company: "Devnest",
+    name: "Devnest",
     year: "2025",
     title: "One-Click Dev Workstation Setup",
     results: [
@@ -38,11 +44,14 @@ const portfolioProjects = [
           "Integrated essential tools, extensions, Apps and configs out-of-the-box",
       },
     ],
-    link: "https://react-weather-six-rho.vercel.app/",
+    link: "",
     image: Devnest,
+    isapp: true,
+    isweb: false,
+    github: "https://github.com/smrutiofficial/Devnest",
   },
   {
-    company: "LifeHrfusion",
+    name: "LifeHrfusion",
     year: "2025",
     title: "Next-Gen Workforce Management",
     results: [
@@ -55,11 +64,14 @@ const portfolioProjects = [
           "Improved employee self-service with real-time profile and leave updates",
       },
     ],
-    link: "https://react-weather-six-rho.vercel.app/",
+    link: "",
     image: Lifehrsision,
+    isapp: false,
+    isweb: true,
+    github: "https://github.com/smrutiofficial/Life_HrFusion",
   },
   {
-    company: "KernelHub",
+    name: "KernelHub",
     year: "2024",
     title: "Linux & Open Source News Platform",
     results: [
@@ -69,11 +81,14 @@ const portfolioProjects = [
       },
       { title: "Engaged 5K+ monthly readers from the open-source community" },
     ],
-    link: "https://react-weather-six-rho.vercel.app/",
+    link: "http://kernelhub.vercel.app/ ",
     image: Kernelhub,
+    isapp: false,
+    isweb: true,
+    github: "https://github.com/smrutiofficial/Kernel_Hub",
   },
   {
-    company: "Bhabyasight",
+    name: "Bhabyasight",
     year: "2024",
     title: "Photography Portfolio Website",
     results: [
@@ -82,9 +97,12 @@ const portfolioProjects = [
     ],
     link: "https://bhabyaphotography.vercel.app/",
     image: Photography,
+    isapp: false,
+    isweb: true,
+    github: "https://github.com/smrutiofficial/photography",
   },
   {
-    company: "Foodlane",
+    name: "Foodlane",
     year: "2023",
     title: "Smart Restaurant Management System",
     results: [
@@ -93,6 +111,9 @@ const portfolioProjects = [
     ],
     link: "https://food-lane-puce.vercel.app/",
     image: Resturant,
+    isapp: false,
+    isweb: true,
+    github: "https://github.com/smrutiofficial/FoodLane",
   },
 ];
 
@@ -126,10 +147,9 @@ export const ProjectsSection = () => {
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
                   <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text gap-2">
-                    <span>{project.company}</span>
+                    <span>{project.name}</span>
                     <span>{project.year}</span>
                   </div>
-
                   <h3 className="font-serif text-2xl mt-2 md:text-4xl md:mt-5">
                     {project.title}
                   </h3>
@@ -145,10 +165,26 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
+                  {project.isweb==true?
                   <a href={project.link}>
-                    <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl inline-flex items-center justify-center gap-2 mt-8">
+                    <button className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl inline-flex items-center justify-center gap-2 mt-8">
                       <span>View Live Site</span>
                       <Arrowup className="size-4" />
+                    </button>
+                  </a>
+                  :<></>}
+                  {project.isapp==true?
+                  <a href={project.link}>
+                    <button className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl inline-flex items-center justify-center gap-2 mt-8">
+                      <span>Download App</span>
+                      <FaDownload className="size-4" />
+                    </button>
+                  </a>
+                  :<></>}
+                  <a href={project.github}>
+                    <button className="bg-white text-gray-950 ml-10 h-12 w-full md:w-auto px-6 rounded-xl inline-flex items-center justify-center gap-2 mt-8">
+                      <FaGithub className="size-4" />
+                      <span>View Git Repo</span>
                     </button>
                   </a>
                 </div>
