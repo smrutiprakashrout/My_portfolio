@@ -1,9 +1,9 @@
-import React, { FC, SVGProps } from "react";
+import React from "react";
 
 export const TechIcon = ({
   component: Component,
 }: {
-  component: FC<SVGProps<SVGSVGElement>>;
+  component: React.ComponentType<{ className?: string }>;
 }) => {
   return (
     <>

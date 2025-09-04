@@ -17,7 +17,7 @@
     "jsx": "preserve",
     "types": [
       "react",
-      "raect-dom",
+      "react-dom",
       "next"
     ],
     "incremental": true,

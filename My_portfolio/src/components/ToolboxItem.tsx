@@ -1,5 +1,6 @@
 import { TechIcon } from "@/components/TechIcon";
 import { twMerge } from "tailwind-merge";
+import React from "react";
 
 export const ToolBoxItems = ({
   items,
@@ -7,9 +8,9 @@ export const ToolBoxItems = ({
   itemWrapperClassName,
 }: {
   items: {
-    title: string;
-    IconType: React.ElementType;
-  }[];
+  title: string;
+  IconType: React.ComponentType<{ className?: string }>;
+}[];
   className?: string;
   itemWrapperClassName?: string;
 }) => {

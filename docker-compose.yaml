@@ -1,4 +1,11 @@
 services:
+  build-checks:
+    build:
+      context: ./My_portfolio
+      dockerfile: Dockerfile.prod
+    command: sh -c "npx tsc --noEmit && npm run build"
+    networks:
+      - mernstack-network
   client:
     build:
       context: ./My_portfolio
