@@ -22,7 +22,7 @@ export const HeroSection = () => {
         <div className="size-[620px] hero-ring"></div>
         <div className="size-[820px] hero-ring"></div>
         <div className="size-[1020px] hero-ring"></div>
-        <div className="size-[1220px] hero-ring"></div>
+       <div className="size-[1220px] hero-ring"></div>
 
         <HeroOrbit size={430} rotation={-15} shouldOrbit spinduration="30s">
           <SpsrkleIcon className="size-8 text-emerald-300/20" />
@@ -69,15 +69,14 @@ export const HeroSection = () => {
           </div>
         </div>
         <div className="text-center flex px-6 gap-3">
-        <span className="text-white/80 font-bold font-sans text-sm pt-2 w-full">👋🏻 Hey, I&apos;m Smruti, a Fullstack Developer based in India.</span>
+        <span className="text-white/80 font-bold font-sans text-sm pt-2 w-full">👋🏻 Hey, I&apos;m Smruti, a Software and System Engineer based in India.</span>
         </div>
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl  text-center mt-8 tracking-wide">
-            Building Exceptional User Experiences
+            From Code to Cloud, I Deliver End-to-End Solutions
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg text-sm px-4">
-            I specialize in transforming design into functional, high-performing
-            web applications. Let&apos;s discuss your next project.
+          I build scalable, secure, and high-performance applications. From web to cross-platform apps, I deliver seamless user experiences. With DevOps & Linux expertise, I cut deployment time and boost reliability.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">

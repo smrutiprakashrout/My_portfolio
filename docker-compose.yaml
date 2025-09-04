@@ -1,0 +1,42 @@
+services:
+  client:
+    build:
+      context: ./My_portfolio
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    container_name: next-container
+    volumes:
+    - ./My_portfolio:/app
+    - node_modules:/app/node_modules
+    - /app/.next
+    command: npm run dev
+    environment:
+      - NODE_ENV=developement
+      - NEXT_TELEMETRY_DISABLED=1
+      - WATCHPACK_=true
+      - WATCHPACK_POLLING=true
+      - CHOKIDAR_USEPOLLING=true
+    networks:
+      - mernstack-network
+  #   depends_on:
+  #     - database
+  #
+  # database:
+  #   image: mongo
+  #   ports:
+  #     - "5000:27017"
+  #   container_name: mongo-container
+  #   networks:
+  #     - mernstack-network
+  #   volumes:
+  #     - /home/smruti/dev/real-estate-ai/mongo-data:/data/db
+  #   environment:
+  #     - MONGO_INITDB_ROOT_USERNAME=smruti
+  #     - MONGO_INITDB_ROOT_PASSWORD=sm5200
+  #     - MONGO_INITDB_DATABASE=realestate
+
+networks:
+  mernstack-network:
+volumes:
+  node_modules:

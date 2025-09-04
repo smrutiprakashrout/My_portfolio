@@ -8,7 +8,7 @@ export const Header = () => {
         <a href="" className="nav-item">
           About
         </a>
-        <a href="" className="nav-item">
+        <a href="https://kernelhub.vercel.app/" className="nav-item">
           Blog
         </a>
         <a href="" className="nav-item ">

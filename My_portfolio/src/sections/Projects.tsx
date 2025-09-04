@@ -7,12 +7,14 @@ import CheckIcon from "@/assets/icons/check-circle.svg";
 import Arrowup from "@/assets/icons/arrow-up-right.svg";
 import GrainImage from "@/assets/images/grain.jpg";
 // ----------------------------project-----------------------
+import CrossBridge from "@/assets/images/projects/crossbridge.png"
 import Nebulashade from "@/assets/images/projects/nebulashade.png";
 import Lifehrsision from "@/assets/images/projects/lifehrfusion.png";
 import Devnest from "@/assets/images/projects/devnest.png";
 import Kernelhub from "@/assets/images/projects/kernelhub.png";
 import Photography from "@/assets/images/projects/photography.png";
 import Resturant from "@/assets/images/projects/resturant.png";
+
 import Weather from "@/assets/images/projects/weather.png";
 import { FaDownload } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
@@ -49,6 +51,20 @@ const portfolioProjects = [
     isapp: true,
     isweb: false,
     github: "https://github.com/smrutiofficial/Devnest",
+  },
+  {
+    name: "CentralBridge",
+    year: "2025",
+    title: "System Continuity & Ecosystem",
+    results: [
+      { title: "Bridging Android and Linux into One Connected Ecosystem." },
+      { title: "Your Airdrop, Continuity, and Device Sync — Reimagined for Linux." },
+    ],
+    link: "",
+    image: CrossBridge,
+    isapp: true,
+    isweb: false,
+    github: "",
   },
   {
     name: "LifeHrfusion",
@@ -165,22 +181,22 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  {project.isweb==true?
-                  <a href={project.link}>
-                    <button className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl inline-flex items-center justify-center gap-2 mt-8">
-                      <span>View Live Site</span>
-                      <Arrowup className="size-4" />
-                    </button>
-                  </a>
-                  :<></>}
-                  {project.isapp==true?
-                  <a href={project.link}>
-                    <button className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl inline-flex items-center justify-center gap-2 mt-8">
-                      <span>Download App</span>
-                      <FaDownload className="size-4" />
-                    </button>
-                  </a>
-                  :<></>}
+                  {project.isweb == true ?
+                    <a href={project.link}>
+                      <button className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl inline-flex items-center justify-center gap-2 mt-8">
+                        <span>View Live Site</span>
+                        <Arrowup className="size-4" />
+                      </button>
+                    </a>
+                    : <></>}
+                  {project.isapp == true ?
+                    <a href={project.link}>
+                      <button className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl inline-flex items-center justify-center gap-2 mt-8">
+                        <span>Download App</span>
+                        <FaDownload className="size-4" />
+                      </button>
+                    </a>
+                    : <></>}
                   <a href={project.github}>
                     <button className="bg-white text-gray-950 ml-10 h-12 w-full md:w-auto px-6 rounded-xl inline-flex items-center justify-center gap-2 mt-8">
                       <FaGithub className="size-4" />

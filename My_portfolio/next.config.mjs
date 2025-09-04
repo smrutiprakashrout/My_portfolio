@@ -40,7 +40,12 @@ const nextConfig = {
 
     // Modify the file loader rule to ignore *.svg, since we have it handled now.
     fileLoaderRule.exclude = /\.svg$/i;
-
+    // next.config.js
+    // config.module.rules.push({
+    //   test: /\.svg$/,
+    //   issuer: /\.[jt]sx?$/,
+    //   use: ['@svgr/webpack'],
+    // });
     return config;
   },
 };
