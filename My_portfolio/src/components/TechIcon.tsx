@@ -1,5 +1,9 @@
-export const TechIcon = ({ component }: { component: React.ElementType }) => {
-  const Component = component;
+import type { ComponentType, SVGProps } from "react";
+export const TechIcon = ({
+  component: Component,
+}: {
+  component: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+}) => {
   return (
     <>
       <Component className="size-10 fill-[url(#tech-icon-gradient)]" />
