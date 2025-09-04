@@ -1,8 +1,9 @@
-import type { ComponentType, SVGProps } from "react";
+import type { ComponentType } from "react";
+
 export const TechIcon = ({
   component: Component,
 }: {
-  component: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  component: ComponentType<{ className?: string }>;
 }) => {
   return (
     <>
