@@ -16,8 +16,8 @@ const Quickabout = () => {
           See how i transformed concepts into enging digital experinces.
         </p>
       </div>
-      <div className="flex justify-center items-center pt-28">
-        <Roadmap className="lg:w-[62%] md:w-[55%] w-[80%] h-auto" />
+      <div className="flex justify-center items-center lg:pt-20 md:pt-20 pt-12">
+        <Roadmap className="lg:w-[62%] md:w-[55%] w-[90%] h-auto" />
       </div>
     </section>
   );
