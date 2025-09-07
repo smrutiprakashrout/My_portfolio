@@ -21,18 +21,6 @@ import { motion } from 'framer-motion'
 import { Bash, NodeJs, Rust, Kotlin, Dart, TailwindCSS, MongoDB, Flutter, PostgresSQL, Swift, ArchLinux, AWS, Docker, Kubernetes, Jenkins, Ansible, Terraform, Prometheus } from "../assets/icons/index.js"
 const toolboxItems = [
   {
-    title: "JavaScript",
-    IconType: JavascriptIcon,
-  },
-  {
-    title: "React",
-    IconType: ReactIcon,
-  },
-  {
-    title: "Github",
-    IconType: GithubIcon,
-  },
-  {
     title: "Bash",
     IconType: Bash,
   },
@@ -50,7 +38,7 @@ const toolboxItems = [
   },
   {
     title: "Dart",
-    IconType: GithubIcon,
+    IconType: Dart,
   },
   {
     title: "Tailwind",
@@ -104,6 +92,19 @@ const toolboxItems = [
     title: "Prometheus",
     IconType: Prometheus,
   },
+  {
+    title: "JavaScript",
+    IconType: JavascriptIcon,
+  },
+  {
+    title: "React",
+    IconType: ReactIcon,
+  },
+  {
+    title: "Github",
+    IconType: GithubIcon,
+  },
+
 ];
 
 
