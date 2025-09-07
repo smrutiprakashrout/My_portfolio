@@ -12,7 +12,7 @@ const Madewith = () => {
       <div className="flex lg:flex-row md:flex-row flex-col justify-around  lg:mx-40 md:mx-30 mx-10 lg:mt-28 md:mt-28 mt-20 lg:gap-0 md:gap-0 gap-12">
         {/* technology */}
         <div >
-          <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text ">Techstack</h3>
+          <h3 className="lg:text-2xl md:text-2xl text-xl font-bold mb-6 bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text ">Techstack</h3>
           <ul className="list-none">
             <li>- Next js</li>
             <li>- Tailwind Css</li>
@@ -21,7 +21,7 @@ const Madewith = () => {
         </div>
         {/* refarence */}
         <div className="flex flex-col items-start text-start">
-          <h3 className="text-2xl font-bold mb-6 text-start bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text ">Tools</h3>
+          <h3 className="lg:text-2xl md:text-2xl text-xl font-bold mb-6 text-start bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text ">Tools</h3>
           <ul className="list-none">
             <li>- Tmux</li>
             <li>- Neovim</li>
@@ -36,7 +36,7 @@ const Madewith = () => {
         </div>
         {/* songs */}
         <div className="flex flex-col items-start text-start">
-          <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text ">Songs</h3>
+          <h3 className="lg:text-2xl md:text-2xl text-xl  font-bold mb-6 bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text ">Songs</h3>
           <ul className="list-none">
             <li>- Die with a Smile</li>
             <li>- Birds of a Feather</li>
@@ -52,7 +52,7 @@ const Madewith = () => {
         </div>
         {/* tools */}
         <div className="flex flex-col items-start text-start">
-          <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text ">Others</h3>
+          <h3 className="lg:text-2xl md:text-2xl text-xl font-bold mb-6 bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text ">Others</h3>
           <ul className="list-none">
             <li>- +26 cups of coffee</li>
             <li>- Endless references</li>
