@@ -4,7 +4,7 @@ import { Card } from "@/components/Card";
 import StarIcon from "@/assets/icons/star.svg";
 import BookImage from "@/assets/images/book-cover.png";
 import Image from "next/image";
-import { useRef } from "react" ;
+import { useRef } from "react";
 
 import JavascriptIcon from "@/assets/icons/square-js.svg";
 import HtmlIcon from "@/assets/icons/html5.svg";
@@ -18,19 +18,11 @@ import SmileImage from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolBoxItems } from "@/components/ToolboxItem";
 import { motion } from 'framer-motion'
-
+import { Bash, NodeJs, Rust, Kotlin, Dart, TailwindCSS, MongoDB, Flutter, PostgresSQL, Swift, ArchLinux, AWS, Docker, Kubernetes, Jenkins, Ansible, Terraform, Prometheus } from "../assets/icons/index.js"
 const toolboxItems = [
   {
     title: "JavaScript",
     IconType: JavascriptIcon,
-  },
-  {
-    title: "HTML3",
-    IconType: HtmlIcon,
-  },
-  {
-    title: "CSS3",
-    IconType: CssIcon,
   },
   {
     title: "React",
@@ -40,7 +32,80 @@ const toolboxItems = [
     title: "Github",
     IconType: GithubIcon,
   },
+  {
+    title: "Bash",
+    IconType: Bash,
+  },
+  {
+    title: "Node.js",
+    IconType: NodeJs,
+  },
+  {
+    title: "Rust",
+    IconType: Rust,
+  },
+  {
+    title: "Kotlin",
+    IconType: Kotlin,
+  },
+  {
+    title: "Dart",
+    IconType: GithubIcon,
+  },
+  {
+    title: "Tailwind",
+    IconType: TailwindCSS,
+  },
+  {
+    title: "Mongodb",
+    IconType: MongoDB,
+  },
+  {
+    title: "Flutter",
+    IconType: Flutter,
+  },
+  {
+    title: "Sql",
+    IconType: PostgresSQL,
+  },
+  {
+    title: "SwiftUI",
+    IconType: Swift,
+  },
+  {
+    title: "Linux",
+    IconType: ArchLinux,
+  },
+  {
+    title: "AWS",
+    IconType: AWS,
+  },
+  {
+    title: "Docker",
+    IconType: Docker,
+  },
+  {
+    title: "Kubernetes",
+    IconType: Kubernetes,
+  },
+  {
+    title: "Jenkins",
+    IconType: Jenkins,
+  },
+  {
+    title: "Teraform",
+    IconType: Terraform,
+  },
+  {
+    title: "Ansible",
+    IconType: Ansible,
+  },
+  {
+    title: "Prometheus",
+    IconType: Prometheus,
+  },
 ];
+
 
 const hobbies = [
   {
@@ -100,7 +165,7 @@ export const AboutSection = () => {
         />
         <div className="mt-20 flex flex-col gap-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
-            <Card className="h-[320px] md:col-span-2 lg:col-span-1">
+            <Card className="h-[320px]  md:col-span-2 lg:col-span-1">
               <CardHeader
                 title="My Reads"
                 description="Explore the books shaping my perpectives."
@@ -120,13 +185,13 @@ export const AboutSection = () => {
                 />
               </div>
 
-              <ToolBoxItems items={toolboxItems} 
-              className="" 
-              itemWrapperClassName="animate-move-left [animation-duration:30s]"/>
+              <ToolBoxItems items={toolboxItems}
+                className=""
+                itemWrapperClassName="animate-move-left [animation-duration:70s]" />
               <ToolBoxItems
                 items={toolboxItems}
                 className="mt-6"
-                itemWrapperClassName=" -translate-x-1/2 animate-move-right [animation-duration:15s]"
+                itemWrapperClassName=" -translate-x-1/2 animate-move-right [animation-duration:120s]"
               />
             </Card>
           </div>
@@ -165,7 +230,7 @@ export const AboutSection = () => {
               />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10 animate-ping [animation-duration:2s]"></div>
-                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
                 <Image src={SmileImage} alt="" className="size-20" />
               </div>
             </Card>
