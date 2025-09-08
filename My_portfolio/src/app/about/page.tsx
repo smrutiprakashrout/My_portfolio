@@ -10,20 +10,20 @@ const About = () => {
     <div>
       <Header />
       {/* Image bg */}
-      <div className="fixed -z-10 top-2 w-[40%] h-[100%] rounded-tr-full rounded-br-full overflow-hidden">
-        <Image src={Selfpic} alt="" className="w-full h-full object-cover opacity-30 saturate-0 brightness-60 contrast-80" />
+      <div className="lg:fixed md:fixed absolute -z-10 lg:top-2 md:top-2 top-20 lg:w-[40%] md:w-[40%] w-[90%] lg:h-[100%] md:h-[100%] h-[40%] rounded-tr-full rounded-br-full overflow-hidden">
+        <Image src={Selfpic} alt="" className="w-full h-full object-cover lg:opacity-30 md:opacity-30 opacity-100 lg:saturate-0 md:saturate-0 saturate-100 brightness-60 contrast-80" />
       </div>
       {/* ------------ */}
-      <div className="flex flex-col justify-center items-center mt-[20%]">
-        <div className="max-w-[50%]">
-          <h2 className="font-bold text-4xl  bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">About [Smruti Prakash Rout]</h2>
+      <div className="flex flex-col justify-center items-center lg:mt-[20%] md:mt-[20%] mt-[106%]">
+        <div className="lg:max-w-[50%] md:max-w-[50%] max-w-[80%]">
+          <h2 className="font-bold lg:text-4xl md:text-4xl text-3xl  bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">Smruti Prakash Rout</h2>
           {/* a row to add linkdin,github,text[download my cv],buton to download */}
           <div className="flex flex-row gap-4 mt-4 items-center">
             <LinkdinIcon className="w-6 h-auto" />
             <Github className="w-6 h-auto" />
-            <p className="">Download My</p>
-            <button className="bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent  text-black py-2 px-4 rounded-md flex flex-row items-center gap-2 text-sm font-bold"><Link href="./Smruti_Prakash_Rout_Resume.pdf">Resume</Link>
-              <Arrowdown className="w-3 h-3" /></button>
+            <p className="lg:text-lg md:text-lg text-xs">Download My</p>
+            <button className="bg-gradient-to-r from-emerald-300 to-sky-400 text-black py-2 px-4 rounded-md flex flex-row items-center gap-2 text-sm font-bold"><Link href="./Smruti_Prakash_Rout_Resume.pdf">Resume</Link>
+              <Arrowdown className="w-3 h-3 text-black fill-black" /></button>
           </div>
           <p className="text-orange-400 pt-6 mix-blend-difference ">{`// he/him`}</p>
           <p className="text-orange-400 mix-blend-difference ">{`// From Asia, based in India,Odisha,Bhubaneswar`}</p>
@@ -32,7 +32,7 @@ const About = () => {
           {/* experiance */}
           <div className=" pt-6 pb-2 w-full">
             <h2 className="text-xl font-bold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">Experience</h2>
-            <div className="flex flex-row justify-between">
+            <div className="flex lg:flex-row md:flex-row flex-col justify-between">
               <ul>
                 <p className="mt-4 text-orange-400 font-bold mix-blend-difference ">Feelanceing</p>
                 <li className="text-gray-400 text-sm mt-2">@ Remote</li>
@@ -54,7 +54,7 @@ const About = () => {
 
           {/* main skills */}
           <h2 className="pt-6 pb-2 text-xl font-bold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">Main Skills</h2>
-          <div className="flex text-white flex-row justify-between">
+          <div className="flex text-white lg:flex-row md:flex-row flex-col lg:gap-0 md:gap-0 gap-6 justify-between">
             <ul>
               <p className="mb-4 text-orange-400 mix-blend-difference ">@ Languages</p>
               <li>Java</li>
@@ -112,9 +112,9 @@ const About = () => {
           </div>
         </div>
         {/* languages */}
-        <div className=" pt-6 pb-2 w-[50%] ">
+        <div className=" pt-6 pb-2 lg:max-w-full md:max-w-full max-w-[80%] lg:w-[50%] md:w-[50%] w-[80%] ">
           <h2 className="text-xl font-bold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">Languages</h2>
-          <div className="flex flex-row justify-between">
+          <div className="flex lg:flex-row md:flex-row flex-col justify-between">
             <ul>
               <p className="my-4 text-orange-400 mix-blend-difference">{`// Fluent`}</p>
               <li>English</li>
@@ -134,9 +134,9 @@ const About = () => {
         </div>
 
         {/* tools for wrkflow */}
-        <div className="pt-6 pb-2 w-[50%] ">
+        <div className="pt-6 pb-2 lg:max-w-full md:max-w-full max-w-[80%] lg:w-[50%] md:w-[50%] w-[80%] ">
           <h2 className="text-xl font-bold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">My Tools of Choice</h2>
-          <div className="flex flex-row justify-between">
+          <div className="flex lg:flex-row md:flex-row flex-col justify-between">
             <ul>
               <p className="my-4 text-orange-400 mix-blend-difference ">@ Developement</p>
               <li>Neovim</li>
@@ -173,10 +173,11 @@ const About = () => {
           {/* aso busy with */}
           <div className=" pt-6 pb-52 ">
             <h2 className="bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text text-xl font-bold mb-4">Also Busy With</h2>
-            <ul className="flex fex-row justify-between mb-28">
+            <ul className="flex lg:fex-row md:flex-row flex-col justify-between lg:mb-28 md:mb-26 mb-2 lg:gap-0  md:gap-0 gap-4">
               <li>Pet my dog</li>
               <li>Games</li>
-              <li>Movies/Series (Sci-fi)</li>
+              <li>WebSeries (Sci-fi)</li>
+              <li>Music</li>
             </ul>
           </div>
         </div>
