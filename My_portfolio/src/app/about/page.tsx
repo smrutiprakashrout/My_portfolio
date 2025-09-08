@@ -25,8 +25,8 @@ const About = () => {
             <button className="bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent  text-black py-2 px-4 rounded-md flex flex-row items-center gap-2 text-sm font-bold"><Link href="./Smruti_Prakash_Rout_Resume.pdf">Resume</Link>
               <Arrowdown className="w-3 h-3" /></button>
           </div>
-          <p className="text-orange-400 pt-6 mix-blend-difference ">// he/him</p>
-          <p className="text-orange-400 mix-blend-difference ">// From Asia, based in India,Odisha,Bhubaneswar</p>
+          <p className="text-orange-400 pt-6 mix-blend-difference ">{`// he/him`}</p>
+          <p className="text-orange-400 mix-blend-difference ">{`// From Asia, based in India,Odisha,Bhubaneswar`}</p>
           <p className="w-full pt-6 text-white">Software and System engineer with expetise in networkiing,Linux administation,fullstack web & crossplatform application development ,Devops & Virtualization Specialist.Enthusiastic about Linux desktop/server, music, coffee, and automation systems. Apart from that, I love teaching, mentorship, team management, and have excellent communication skills. </p>
 
           {/* experiance */}
@@ -116,17 +116,17 @@ const About = () => {
           <h2 className="text-xl font-bold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">Languages</h2>
           <div className="flex flex-row justify-between">
             <ul>
-              <p className="my-4 text-orange-400 mix-blend-difference">// Fluent</p>
+              <p className="my-4 text-orange-400 mix-blend-difference">{`// Fluent`}</p>
               <li>English</li>
               <li>Hindi</li>
               <li>Odia</li>
             </ul>
             <ul>
-              <p className="my-4 text-orange-400 mix-blend-difference">// Itermediate</p>
+              <p className="my-4 text-orange-400 mix-blend-difference">{`// Itermediate`}</p>
               <li></li>
             </ul>
             <ul>
-              <p className="my-4 text-orange-400 mix-blend-difference">// Basic</p>
+              <p className="my-4 text-orange-400 mix-blend-difference">{`// Basic`}</p>
               <li></li>
             </ul>
           </div>
