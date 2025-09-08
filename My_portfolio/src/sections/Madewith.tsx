@@ -14,48 +14,49 @@ const Madewith = () => {
         <div >
           <h3 className="lg:text-2xl md:text-2xl text-xl font-bold mb-6 bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text ">Techstack</h3>
           <ul className="list-none">
-            <li>- Next js</li>
-            <li>- Tailwind Css</li>
-            <li>- Framermotion</li>
+            <li>~ Next js</li>
+            <li>~ Tailwind Css</li>
+            <li>~ Framermotion</li>
           </ul>
         </div>
         {/* refarence */}
         <div className="flex flex-col items-start text-start">
           <h3 className="lg:text-2xl md:text-2xl text-xl font-bold mb-6 text-start bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text ">Tools</h3>
           <ul className="list-none">
-            <li>- Tmux</li>
-            <li>- Neovim</li>
-            <li>- Lazygit</li>
-            <li>- Lazydocker</li>
-            <li>- Inkscape</li>
-            <li>- Blender</li>
-            <li>- Gimp</li>
-            <li>- Figma</li>
-            <li>- Vercel</li>
+            <li>~ Tmux</li>
+            <li>~ Neovim</li>
+            <li>~ Lazygit</li>
+            <li>~ Lazydocker</li>
+            <li>~ Zen</li>
+            <li>~ Inkscape</li>
+            <li>~ Blender</li>
+            <li>~ Gimp</li>
+            <li>~ Figma</li>
+            <li>~ Vercel</li>
           </ul>
         </div>
         {/* songs */}
         <div className="flex flex-col items-start text-start">
           <h3 className="lg:text-2xl md:text-2xl text-xl  font-bold mb-6 bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text ">Songs</h3>
           <ul className="list-none">
-            <li>- Die with a Smile</li>
-            <li>- Birds of a Feather</li>
-            <li>- Takedown</li>
-            <li>- One of the Girls</li>
-            <li>- Golden</li>
-            <li>- Cry For Me</li>
-            <li>- Attention</li>
-            <li>- Cry For Me</li>
-            <li>- Blinding light</li>
-            <li>- Shivers</li>
+            <li>~ Die with a Smile</li>
+            <li>~ Birds of a Feather</li>
+            <li>~ Takedown</li>
+            <li>~ One of the Girls</li>
+            <li>~ Golden</li>
+            <li>~ Cry For Me</li>
+            <li>~ Attention</li>
+            <li>~ Cry For Me</li>
+            <li>~ Blinding light</li>
+            <li>~ Shivers</li>
           </ul>
         </div>
         {/* tools */}
         <div className="flex flex-col items-start text-start">
           <h3 className="lg:text-2xl md:text-2xl text-xl font-bold mb-6 bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text ">Others</h3>
           <ul className="list-none">
-            <li>- +26 cups of coffee</li>
-            <li>- Endless references</li>
+            <li>~ +26 cups of coffee</li>
+            <li>~ Endless references</li>
           </ul>
         </div>
       </div>
