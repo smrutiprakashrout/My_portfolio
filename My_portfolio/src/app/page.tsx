@@ -8,12 +8,14 @@ import { Footer } from "@/sections/Footer";
 import { ContactSection } from "@/sections/Contact";
 import Quickabout from "@/sections/Quickabout";
 import Madewith from "@/sections/Madewith";
+import Shortstorry from "@/sections/Shortstorry";
 
 export default function Home() {
   return (
     <div>
       <Header />
       <HeroSection />
+      <Shortstorry/>
       {/* ------ scrolling story page about myself ----- */}
       {/* ---------- about linux system admin -------- */}
       {/* ---------- devops tools oparations --------- */}
