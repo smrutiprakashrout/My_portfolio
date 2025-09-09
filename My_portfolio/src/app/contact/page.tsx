@@ -1,24 +1,24 @@
 import React from "react";
-import Emailicon from "../../assets/icons/envelope.svg";
-import Whatsicon from "../../assets/icons/whatsapp.svg";
-import Mapicon from "../../assets/icons/map-marker.svg";
-import GithubIcon from "../../assets/icons/github.svg";
-import LinkedinIcon from "../../assets/icons/LinkedIn.svg";
-import InstagramIcon from "../../assets/icons/instagram.svg";
-import YoutubeIcon from "../../assets/icons/youtube.svg";
+import Emailicon from "@/assets/icons/envelope.svg";
+import Whatsicon from "@/assets/icons/whatsapp.svg";
+import Mapicon from "@/assets/icons/map-marker.svg";
+import GithubIcon from "@/assets/icons/github.svg";
+import LinkedinIcon from "@/assets/icons/LinkedIn.svg";
+import InstagramIcon from "@/assets/icons/instagram.svg";
+import YoutubeIcon from "@/assets/icons/youtube.svg";
 import { Header } from "@/sections/Header";
 const Contact = () => {
   type ContactItemProps = {
-    icon: string;
+    icon: React.ReactNode;
     label: string;
     value: string;
   };
 
-  function ContactItem({ icon: Icon, label, value }: ContactItemProps) {
+  function ContactItem({ icon, label, value }: ContactItemProps) {
     return (
       <div className="flex flex-row h-12 w-full">
         <div className="w-fit px-4 flex items-center justify-center rounded-lg bg-gray-800">
-          <Icon className="lg:w-8 md:w-6 w-6 h-auto" />
+          {icon}
         </div>
         <div className="flex flex-col w-[80%] lg:ml-6 md:ml-6 ml-2">
           <div className="h-[50%] flex items-center text-gray-500 ">
@@ -32,9 +32,9 @@ const Contact = () => {
     );
   }
   const contacts = [
-    { icon: Emailicon, label: "Email", value: "smrutiprakashrout3@gmail.com" },
-    { icon: Whatsicon, label: "Whatsapp", value: "+91 9861955265" },
-    { icon: Mapicon, label: "Location", value: "Bhubaneswar, India" },
+    { icon: <Emailicon className="lg:w-8 md:w-6 w-6 h-auto"/>, label: "Email", value: "smrutiprakashrout3@gmail.com" },
+    { icon: <Whatsicon className="lg:w-8 md:w-6 w-6 h-auto"/>, label: "Whatsapp", value: "+91 9861955265" },
+    { icon: <Mapicon className="lg:w-8 md:w-6 w-6 h-auto"/>, label: "Location", value: "Bhubaneswar, India" },
   ];
   return (
     <div>
@@ -51,18 +51,18 @@ const Contact = () => {
           {/* --------------------- flex with contact and from ----------------------------- */}
         </div>
 
-        <div className="flex lg:flex-row md:flex-row lg:gap-0 md:gap-0 gap-12 flex-col mt-8 lg:w-[70%] md:w-[70%] w-[80%] h-[60vh]">
+        <div className="flex lg:flex-row md:flex-row lg:gap-0 md:gap-0 gap-12 flex-col mt-12 lg:w-[70%] md:w-[70%] w-[80%] h-[60vh]">
           <div className="w-1/2 h-full">
             <h2 className="lg:text-4xl md:text-4xl text-xl lg:w-full md:w-full w-max mx-auto text-center font-bold my-6">
               Contact Information
             </h2>
-            <div className="flex flex-col gap-4 lg:mx-[10%] md:mx-[10%] mx-[2%] my-[20%]">
+            <div className="flex flex-col gap-4 lg:mx-[10%] md:mx-[10%] mx-[2%] mt-[15%]">
               {contacts.map((item, index) => (
                 <ContactItem key={index} {...item} />
               ))}
             </div>
             {/* ----------------- */}
-            <div className="flex flex-col justify-center text-center ">
+            <div className="flex flex-col justify-center text-center mt-[15%]">
               Connect With Me
               <div className="flex flex-row gap-4 mt-3 justify-center">
                 <GithubIcon className="w-4 h-auto text-white" />
