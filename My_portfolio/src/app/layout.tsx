@@ -12,8 +12,27 @@ const calistoga = Calistoga({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "Created with the help of Frontend Tribe",
+  title: "Smruti Prakash Rout | Software Developer Portfolio",
+  description:
+    "Portfolio of Smruti Prakash Rout - Software Developer, Linux Developer, DevOps Engineer, and Fullstack Developer from India.",
+  keywords: [
+    "Smruti",
+    "Smruti Prakash Rout",
+    "Software Developer",
+    "Software Developer in India",
+    "DevOps Engineer",
+    "Linux Developer",
+    "Fullstack Developer",
+    "DevSmuti",
+  ],
+  openGraph: {
+    title: "Smruti Prakash Rout | Software Developer",
+    description:
+      "Portfolio of Smruti Prakash Rout - Software Developer, Linux Developer, DevOps Engineer, and Fullstack Developer.",
+    url: "https://devsmuti.vercel.app",
+    siteName: "DevSmuti Portfolio",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
