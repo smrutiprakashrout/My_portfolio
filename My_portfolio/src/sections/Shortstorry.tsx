@@ -232,7 +232,7 @@ const StoryScroll = () => {
   ];
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="h-full relative overflow-hidden">
       {/* Cinematic Background */}
       <div className="cinematic-bg absolute inset-0">
         
@@ -282,7 +282,7 @@ const StoryScroll = () => {
 
         {/* Grid Pattern */}
         <div 
-          className="absolute inset-0 opacity-10"
+          className="absolute inset-0 opacity-10 h-[150%]"
           style={{
             backgroundImage: `
               linear-gradient(rgba(59, 130, 246, 1) 1px, transparent 1px),

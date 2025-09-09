@@ -51,10 +51,10 @@ const Contact = () => {
           {/* --------------------- flex with contact and from ----------------------------- */}
         </div>
 
-        <div className="flex lg:flex-row md:flex-row lg:gap-0 md:gap-0 gap-12 flex-col mt-12 lg:w-[70%] md:w-[70%] w-[80%] h-[60vh]">
+        <div className="flex lg:flex-row md:flex-row lg:gap-0 md:gap-0 gap-12 flex-col mt-12 lg:w-[70%] md:w-[70%] w-[90%] h-[60vh]">
           <div className="w-1/2 h-full">
-            <h2 className="lg:text-4xl md:text-4xl text-xl lg:w-full md:w-full w-max mx-auto text-center font-bold my-6">
-              Contact Information
+            <h2 className="lg:w-full md:w-full w-[90vw] text-center font-bold my-6 mb-10">
+              <p className="lg:text-3xl md:text-3xl text-md text-gray-400">Contact Information</p>
             </h2>
             <div className="flex flex-col gap-4 lg:mx-[10%] md:mx-[10%] mx-[2%] mt-[15%]">
               {contacts.map((item, index) => (
@@ -62,8 +62,8 @@ const Contact = () => {
               ))}
             </div>
             {/* ----------------- */}
-            <div className="flex flex-col justify-center text-center mt-[15%]">
-              Connect With Me
+            <div className="flex flex-col justify-center text-center lg:mt-[15%] md:mt-[15%] mt-[35%] lg:w-full md:w-full w-[90vw]">
+             <p className="lg:text-md md:text:md text-xs text-gray-600">Connect With Me</p> 
               <div className="flex flex-row gap-4 mt-3 justify-center">
                 <GithubIcon className="w-4 h-auto text-white" />
                 <LinkedinIcon className="w-4 h-auto text-white" />
@@ -74,7 +74,7 @@ const Contact = () => {
           </div>
 
           {/* ----------------- */}
-          <div className="bg-gray-800 lg:w-1/2 md:w-1/2 w-full lg:h-full md:h-full h-fit">
+          <div className="bg-gray-800 lg:mb-0 md:mb-0 lg:w-1/2 md:w-1/2 w-full lg:h-full md:h-full h-fit">
             <h2 className="bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text lg:text-4xl md:text-4xl text-xl lg:w-full md:w-full w-max mx-auto text-center font-bold my-6">
               Send a Massage
             </h2>
@@ -103,7 +103,9 @@ const Contact = () => {
               <button className="lg:mb-0 md:mb-0 mb-12 bg-gradient-to-r from-emerald-300 to-sky-400 text-black lg:w-[80%] md:w-[80%] w-[90%] rounded-md lg:h-12 md:h-12 h-10">Send Message</button>
             </div>
             {/* --------------- */}
+           
           </div>
+           <p>.</p>
         </div>
       </div>
     </div>
