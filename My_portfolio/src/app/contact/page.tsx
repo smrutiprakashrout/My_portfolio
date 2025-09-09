@@ -97,7 +97,6 @@ const Contact = () => {
               <div className="lg:w-[80%] md:w-[80%] w-[90%] flex flex-col gap-2 text-gray-500">
                 <p>Your Message</p>
                 <textarea
-                  type="text"
                   className="bg-gray-700 rounded-md h-[8rem] w-full"
                 />
               </div>
