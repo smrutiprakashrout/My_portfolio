@@ -185,7 +185,7 @@ export const ProjectsSection = () => {
                     {project.isweb == true ?
                       <a href={project.link}>
                         <button className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-950 h-12 w-auto md:w-auto px-6 rounded-xl inline-flex items-center justify-center gap-2 mt-8">
-                          <span className="lg:text-[1rem] md:text[1rem] text-[0.6rem]">View Live</span>
+                          <span className="lg:text-[1rem] md:text[1rem] text-[0.6rem]">View Webpage</span>
                           <Arrowup className="size-4" />
                         </button>
                       </a>
