@@ -9,7 +9,7 @@ import YoutubeIcon from "../../assets/icons/youtube.svg";
 import { Header } from "@/sections/Header";
 const Contact = () => {
   type ContactItemProps = {
-    icon: React.ElementType;
+    icon: string;
     label: string;
     value: string;
   };
