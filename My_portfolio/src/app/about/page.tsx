@@ -11,12 +11,12 @@ const About = () => {
       <Header />
       {/* Image bg */}
       <div className="lg:fixed md:fixed absolute -z-10 lg:top-2 md:top-2 top-20 lg:w-[40%] md:w-[40%] w-[90%] lg:h-[100%] md:h-[100%] h-[40%] rounded-tr-full rounded-br-full overflow-hidden">
-        <Image src={Selfpic} alt="" className="w-full h-full object-cover lg:opacity-30 md:opacity-30 opacity-100 lg:saturate-0 md:saturate-0 saturate-100 brightness-60 contrast-80" />
+        <Image src={Selfpic} alt="" className="w-full h-full object-cover lg:opacity-30 md:opacity-30 opacity-100 lg:saturate-0 md:saturate-0 saturate-50 brightness-60 contrast-80" />
       </div>
       {/* ------------ */}
       <div className="flex flex-col justify-center items-center lg:mt-[20%] md:mt-[20%] mt-[106%]">
         <div className="lg:max-w-[50%] md:max-w-[50%] max-w-[80%]">
-          <h2 className="font-bold lg:text-4xl md:text-4xl text-3xl  bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">Smruti Prakash Rout</h2>
+          <h2 className="font-bold lg:text-4xl md:text-4xl text-2xl  bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">Smruti Prakash Rout</h2>
           {/* a row to add linkdin,github,text[download my cv],buton to download */}
           <div className="flex flex-row gap-4 mt-4 items-center">
             <LinkdinIcon className="w-6 h-auto" />
@@ -26,7 +26,7 @@ const About = () => {
               <Arrowdown className="w-3 h-3 text-black fill-black" /></button>
           </div>
           <p className="text-orange-400 pt-6 mix-blend-difference ">{`// he/him`}</p>
-          <p className="text-orange-400 mix-blend-difference ">{`// From Asia, based in India,Odisha,Bhubaneswar`}</p>
+          <p className="text-orange-400 mix-blend-difference ">{`// From Asia, based in India, Odisha, Bhubaneswar`}</p>
           <p className="w-full pt-6 text-white">Software and System engineer with expetise in networkiing,Linux administation,fullstack web & crossplatform application development ,Devops & Virtualization Specialist.Enthusiastic about Linux desktop/server, music, coffee, and automation systems. Apart from that, I love teaching, mentorship, team management, and have excellent communication skills. </p>
 
           {/* experiance */}
@@ -171,9 +171,9 @@ const About = () => {
             </ul>
           </div>
           {/* aso busy with */}
-          <div className=" pt-6 pb-52 ">
+          <div className=" pt-6 lg:pb-52 md:pb-52  ">
             <h2 className="bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text text-xl font-bold mb-4">Also Busy With</h2>
-            <ul className="flex lg:fex-row md:flex-row flex-col justify-between lg:mb-28 md:mb-26 mb-2 lg:gap-0  md:gap-0 gap-4">
+            <ul className="flex lg:fex-row md:flex-row flex-col justify-between mb-28 lg:gap-0  md:gap-0 gap-2">
               <li>Pet my dog</li>
               <li>Games</li>
               <li>WebSeries (Sci-fi)</li>
