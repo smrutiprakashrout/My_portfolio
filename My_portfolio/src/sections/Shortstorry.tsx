@@ -407,7 +407,7 @@ const StoryScroll = () => {
                   className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-emerald-500 to-sky-400 bg-clip-text text-transparent opacity-0 blur-sm pointer-events-none"
                   aria-hidden="true"
                 >
-                  "{text}"
+                  &quot;{text}&quot;
                 </span>
               </p>
             </div>
