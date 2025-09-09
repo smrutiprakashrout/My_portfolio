@@ -5,8 +5,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Sec_Header from "@/components/Sec_Header";
 
 const StoryScroll = () => {
-  const containerRef = useRef(null);
-  const sectionsRef = useRef([]);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const sectionsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -15,8 +15,8 @@ const StoryScroll = () => {
     sectionsRef.current.forEach((section, index) => {
       if (!section) return;
 
-      const textElement = section.querySelector(".story-text");
-      const pixelOverlay = section.querySelector(".pixel-overlay");
+      const textElement = section.querySelector(".story-text") as HTMLElement;
+      const pixelOverlay = section.querySelector(".pixel-overlay") as HTMLElement;
 
       // Set initial state
       gsap.set(textElement, {
@@ -189,7 +189,7 @@ const StoryScroll = () => {
     };
   }, []);
 
-  const addToRefs = (el) => {
+  const addToRefs = (el: HTMLDivElement | null) => {
     if (el && !sectionsRef.current.includes(el)) {
       sectionsRef.current.push(el);
     }
@@ -346,7 +346,7 @@ const StoryScroll = () => {
             <Sec_Header
               eyebrow="From the Beginning"
               title="My Journey"
-              description="Journeys aren’t built overnight — mine grew from small experiments into a lifelong pursuit of building."
+              description="Journeys aren't built overnight — mine grew from small experiments into a lifelong pursuit of building."
             />
           </div>
         </div>
@@ -447,7 +447,7 @@ const StoryScroll = () => {
         }
         
         .story-text {
-          
+          opacity:1;
         }
 
         .code-fragment {
