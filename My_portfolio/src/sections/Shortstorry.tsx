@@ -400,7 +400,7 @@ const StoryScroll = () => {
               </div>
 
               <p className="story-text text-3xl md:text-5xl lg:text-6xl font-bold text-center leading-tight bg-gradient-to-r from-emerald-200 via-emerald-400 to-sky-200 bg-clip-text text-transparent max-w-5xl italic relative">
-                "{text}"
+                &quot;{text}&quot;
                 
                 {/* Text Glow Effect */}
                 <span 
