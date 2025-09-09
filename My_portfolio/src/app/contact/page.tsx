@@ -6,6 +6,7 @@ import GithubIcon from "@/assets/icons/github.svg";
 import LinkedinIcon from "@/assets/icons/LinkedIn.svg";
 import InstagramIcon from "@/assets/icons/instagram.svg";
 import YoutubeIcon from "@/assets/icons/youtube.svg";
+import Link from "next/link";
 import { Header } from "@/sections/Header";
 const Contact = () => {
   type ContactItemProps = {
@@ -65,10 +66,10 @@ const Contact = () => {
             <div className="flex flex-col justify-center text-center lg:mt-[15%] md:mt-[15%] mt-[35%] lg:w-full md:w-full w-[90vw]">
              <p className="lg:text-md md:text:md text-xs text-gray-600">Connect With Me</p> 
               <div className="flex flex-row gap-4 mt-3 justify-center">
-                <GithubIcon className="w-4 h-auto text-white" />
-                <LinkedinIcon className="w-4 h-auto text-white" />
-                <InstagramIcon className="w-4 h-auto text-white" />
-                <YoutubeIcon className="w-4 h-auto text-white" />
+                <Link href="https://github.com/smrutiofficial"><GithubIcon className="w-4 h-auto text-white" /></Link>
+                <Link href="https://www.linkedin.com/in/smrutiprakashrout/"><LinkedinIcon className="w-4 h-auto text-white" /></Link>
+                <Link href="https://www.instagram.com/smruti_on_linux/"><InstagramIcon className="w-4 h-auto text-white" /></Link>
+                <Link href="https://youtube.com/@smrutionlinux"><YoutubeIcon className="w-4 h-auto text-white" /></Link>
               </div>
             </div>
           </div>

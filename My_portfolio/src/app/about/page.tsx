@@ -1,51 +1,78 @@
-import Link from "next/link"
+import Link from "next/link";
 import Selfpic from "../../assets/images/selfpngbg.jpg";
 import LinkdinIcon from "../../assets/icons/LinkedIn.svg";
 import Github from "../../assets/icons/github.svg";
 import Arrowdown from "../../assets/icons/arrow-down.svg";
 import { Header } from "@/sections/Header";
-import Image from "next/image"
+import Image from "next/image";
 const About = () => {
   return (
     <div>
       <Header />
       {/* Image bg */}
       <div className="lg:fixed md:fixed absolute -z-10 lg:top-2 md:top-2 top-20 lg:w-[40%] md:w-[40%] w-[90%] lg:h-[100%] md:h-[100%] h-[40%] rounded-tr-full rounded-br-full overflow-hidden">
-        <Image src={Selfpic} alt="" className="w-full h-full object-cover lg:opacity-30 md:opacity-30 opacity-100 lg:saturate-0 md:saturate-0 saturate-50 brightness-60 contrast-80" />
+        <Image
+          src={Selfpic}
+          alt=""
+          className="w-full h-full object-cover lg:opacity-30 md:opacity-30 opacity-100 lg:saturate-0 md:saturate-0 saturate-50 brightness-60 contrast-80"
+        />
       </div>
       {/* ------------ */}
       <div className="flex flex-col justify-center items-center lg:mt-[20%] md:mt-[20%] mt-[106%]">
         <div className="lg:max-w-[50%] md:max-w-[50%] max-w-[80%]">
-          <h2 className="font-bold lg:text-4xl md:text-4xl text-2xl  bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">Smruti Prakash Rout</h2>
+          <h2 className="font-bold lg:text-4xl md:text-4xl text-2xl  bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">
+            Smruti Prakash Rout
+          </h2>
           {/* a row to add linkdin,github,text[download my cv],buton to download */}
           <div className="flex flex-row gap-4 mt-4 items-center">
-            <LinkdinIcon className="w-6 h-auto" />
-            <Github className="w-6 h-auto" />
+            <Link href="https://www.linkedin.com/in/smrutiprakashrout/">
+              <LinkdinIcon className="w-6 h-auto" />
+            </Link>
+            <Link href="https://github.com/smrutiofficial">
+              <Github className="w-6 h-auto" />
+            </Link>
             <p className="lg:text-lg md:text-lg text-xs">Download My</p>
-            <button className="bg-gradient-to-r from-emerald-300 to-sky-400 text-black py-2 px-4 rounded-md flex flex-row items-center gap-2 text-sm font-bold"><Link href="./Smruti_Prakash_Rout_Resume.pdf">Resume</Link>
-              <Arrowdown className="w-3 h-3 text-black fill-black" /></button>
+            <button className="bg-gradient-to-r from-emerald-300 to-sky-400 text-black py-2 px-4 rounded-md flex flex-row items-center gap-2 text-sm font-bold">
+              <Link href="./Smruti_Prakash_Rout_Resume.pdf">Resume</Link>
+              <Arrowdown className="w-3 h-3 text-black fill-black" />
+            </button>
           </div>
           <p className="text-orange-400 pt-6 mix-blend-difference ">{`// he/him`}</p>
           <p className="text-orange-400 mix-blend-difference ">{`// From Asia, based in India, Odisha, Bhubaneswar`}</p>
-          <p className="w-full pt-6 text-white">Software and System engineer with expetise in networkiing,Linux administation,fullstack web & crossplatform application development ,Devops & Virtualization Specialist.Enthusiastic about Linux desktop/server, music, coffee, and automation systems. Apart from that, I love teaching, mentorship, team management, and have excellent communication skills. </p>
+          <p className="w-full pt-6 text-white">
+            Software and System engineer with expetise in networkiing,Linux
+            administation,fullstack web & crossplatform application development
+            ,Devops & Virtualization Specialist.Enthusiastic about Linux
+            desktop/server, music, coffee, and automation systems. Apart from
+            that, I love teaching, mentorship, team management, and have
+            excellent communication skills.{" "}
+          </p>
 
           {/* experiance */}
           <div className=" pt-6 pb-2 w-full">
-            <h2 className="text-xl font-bold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">Experience</h2>
+            <h2 className="text-xl font-bold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">
+              Experience
+            </h2>
             <div className="flex lg:flex-row md:flex-row flex-col justify-between">
               <ul>
-                <p className="mt-4 text-orange-400 font-bold mix-blend-difference ">Feelanceing</p>
+                <p className="mt-4 text-orange-400 font-bold mix-blend-difference ">
+                  Feelanceing
+                </p>
                 <li className="text-gray-400 text-sm mt-2">@ Remote</li>
                 <li>~ 2024-Present</li>
               </ul>
 
               <ul>
-                <p className="mt-4 text-orange-400 font-bold mix-blend-difference ">Fullstack Software Delevoper</p>
+                <p className="mt-4 text-orange-400 font-bold mix-blend-difference ">
+                  Fullstack Software Delevoper
+                </p>
                 <li className="text-gray-400 text-sm mt-2">@ Congnifyz</li>
                 <li>~ July 2024</li>
               </ul>
               <ul>
-                <p className="mt-4 text-orange-400 font-bold mix-blend-difference ">Personal Projects</p>
+                <p className="mt-4 text-orange-400 font-bold mix-blend-difference ">
+                  Personal Projects
+                </p>
                 <li className="text-gray-400 text-sm mt-2">@ Work From Home</li>
                 <li>~ 2021-Present</li>
               </ul>
@@ -53,10 +80,14 @@ const About = () => {
           </div>
 
           {/* main skills */}
-          <h2 className="pt-6 pb-2 text-xl font-bold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">Main Skills</h2>
+          <h2 className="pt-6 pb-2 text-xl font-bold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">
+            Main Skills
+          </h2>
           <div className="flex text-white lg:flex-row md:flex-row flex-col lg:gap-0 md:gap-0 gap-6 justify-between">
             <ul>
-              <p className="mb-4 text-orange-400 mix-blend-difference ">@ Languages</p>
+              <p className="mb-4 text-orange-400 mix-blend-difference ">
+                @ Languages
+              </p>
               <li>Java</li>
               <li>Python</li>
               <li>Bash</li>
@@ -67,7 +98,9 @@ const About = () => {
               <li>Kotlin</li>
             </ul>
             <ul>
-              <p className="mb-4 text-orange-400 mix-blend-difference ">@ Frameworks & Database</p>
+              <p className="mb-4 text-orange-400 mix-blend-difference ">
+                @ Frameworks & Database
+              </p>
               <li>React/next.js</li>
               <li>TailwindCss</li>
               <li>WebGl</li>
@@ -84,7 +117,9 @@ const About = () => {
             </ul>
 
             <ul>
-              <p className="mb-4 text-orange-400 mix-blend-difference ">@ Devops</p>
+              <p className="mb-4 text-orange-400 mix-blend-difference ">
+                @ Devops
+              </p>
               <li>Linux</li>
               <li>AWS</li>
               <li>Git</li>
@@ -99,7 +134,9 @@ const About = () => {
             </ul>
 
             <ul>
-              <p className="mb-4 text-orange-400 mix-blend-difference">@ Networking</p>
+              <p className="mb-4 text-orange-400 mix-blend-difference">
+                @ Networking
+              </p>
               <li>TCP/IP</li>
               <li>DNS</li>
               <li>SSL/TLS</li>
@@ -113,7 +150,9 @@ const About = () => {
         </div>
         {/* languages */}
         <div className=" pt-6 pb-2 lg:max-w-full md:max-w-full max-w-[80%] lg:w-[50%] md:w-[50%] w-[80%] ">
-          <h2 className="text-xl font-bold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">Languages</h2>
+          <h2 className="text-xl font-bold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">
+            Languages
+          </h2>
           <div className="flex lg:flex-row md:flex-row flex-col justify-between">
             <ul>
               <p className="my-4 text-orange-400 mix-blend-difference">{`// Fluent`}</p>
@@ -130,15 +169,18 @@ const About = () => {
               <li></li>
             </ul>
           </div>
-
         </div>
 
         {/* tools for wrkflow */}
         <div className="pt-6 pb-2 lg:max-w-full md:max-w-full max-w-[80%] lg:w-[50%] md:w-[50%] w-[80%] ">
-          <h2 className="text-xl font-bold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">My Tools of Choice</h2>
+          <h2 className="text-xl font-bold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">
+            My Tools of Choice
+          </h2>
           <div className="flex lg:flex-row md:flex-row flex-col justify-between">
             <ul>
-              <p className="my-4 text-orange-400 mix-blend-difference ">@ Developement</p>
+              <p className="my-4 text-orange-400 mix-blend-difference ">
+                @ Developement
+              </p>
               <li>Neovim</li>
               <li>Tmux</li>
               <li>Lazygit</li>
@@ -146,7 +188,9 @@ const About = () => {
               <li>Mongodb-Compass</li>
             </ul>
             <ul>
-              <p className="my-4 text-orange-400 mix-blend-difference ">@ Design</p>
+              <p className="my-4 text-orange-400 mix-blend-difference ">
+                @ Design
+              </p>
               <li>Figma</li>
               <li>Gimp</li>
               <li>Inkscape</li>
@@ -154,7 +198,9 @@ const About = () => {
               <li>Kdenlive</li>
             </ul>
             <ul>
-              <p className="my-4 text-orange-400 mix-blend-difference">@ Testing</p>
+              <p className="my-4 text-orange-400 mix-blend-difference">
+                @ Testing
+              </p>
               <li>Insomnia</li>
               <li>Google Chorome</li>
               <li>Zen/Firefox</li>
@@ -162,7 +208,9 @@ const About = () => {
               <li>Oracle Vertualbox</li>
             </ul>
             <ul>
-              <p className="my-4 text-orange-400 mix-blend-difference ">@ Deploy</p>
+              <p className="my-4 text-orange-400 mix-blend-difference ">
+                @ Deploy
+              </p>
               <li>AWS</li>
               <li>Vercel</li>
               <li>Hostinger</li>
@@ -172,7 +220,9 @@ const About = () => {
           </div>
           {/* aso busy with */}
           <div className=" pt-6 lg:pb-52 md:pb-52  ">
-            <h2 className="bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text text-xl font-bold mb-4">Also Busy With</h2>
+            <h2 className="bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text text-xl font-bold mb-4">
+              Also Busy With
+            </h2>
             <ul className="flex lg:fex-row md:flex-row flex-col justify-between mb-28 lg:gap-0  md:gap-0 gap-2">
               <li>Pet my dog</li>
               <li>Games</li>
@@ -182,8 +232,8 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div >
-  )
-}
+    </div>
+  );
+};
 
-export default About
+export default About;

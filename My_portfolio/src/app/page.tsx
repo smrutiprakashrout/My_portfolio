@@ -15,15 +15,12 @@ export default function Home() {
     <div>
       <Header />
       <HeroSection />
-      <Shortstorry/>
-      {/* ------ scrolling story page about myself ----- */}
-      {/* ---------- about linux system admin -------- */}
-      {/* ---------- devops tools oparations --------- */}
-      {/* --------------- Full statck Software Developer --------- */}
-      {/* ---------------- automations and workflow ----------- */}
-      <ProjectsSection />
-      <Quickabout />
       <AboutSection />
+      <ProjectsSection />
+      {/* how i work */}
+      <Quickabout />
+      <Shortstorry />
+
       <TapeSection />
       <TestimonialsSection />
       <Madewith />
