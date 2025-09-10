@@ -277,15 +277,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Enhanced favicon configuration with new icons */}
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/web-app-manifest-192x192.png" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/web-app-manifest-512x512.png" />
-        
-        {/* Apple touch icons */}
-        <link rel="apple-touch-icon" sizes="192x192" href="/web-app-manifest-192x192.png" />
+        {/* Next.js App Directory automatically serves these from /app */}
+        {/* No manual link tags needed for favicon.ico, icon.png, apple-icon.png when in /app */}
         
         {/* PWA manifest */}
         <link rel="manifest" href="/manifest.json" />
