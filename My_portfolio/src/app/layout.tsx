@@ -18,7 +18,7 @@ const calistoga = Calistoga({
 
 // Separate viewport export for better performance
 export const viewport: Viewport = {
-  themeColor: '#111827',
+  themeColor: '#ffffff',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5, // Allow zooming for accessibility
@@ -212,14 +212,22 @@ export const metadata: Metadata = {
   
   applicationName: "DevSmruti Portfolio",
   
-  // Fixed favicon configuration for your files only
+  // Updated favicon configuration with new icons
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
       { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/web-app-manifest-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/web-app-manifest-512x512.png', sizes: '512x512', type: 'image/png' },
     ],
     shortcut: '/favicon.ico',
+    apple: [
+      { url: '/web-app-manifest-192x192.png', sizes: '192x192', type: 'image/png' },
+    ],
   },
+  
+  // PWA manifest
+  manifest: '/manifest.json',
   
   // Enhanced Open Graph
   openGraph: {
@@ -269,10 +277,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Firefox-specific favicon fixes - only for your existing files */}
+        {/* Enhanced favicon configuration with new icons */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/web-app-manifest-192x192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/web-app-manifest-512x512.png" />
+        
+        {/* Apple touch icons */}
+        <link rel="apple-touch-icon" sizes="192x192" href="/web-app-manifest-192x192.png" />
+        
+        {/* PWA manifest */}
+        <link rel="manifest" href="/manifest.json" />
         
         {/* Enhanced JSON-LD structured data */}
         <script
