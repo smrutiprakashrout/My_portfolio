@@ -17,6 +17,8 @@ const Madewith = () => {
             <li>~ Next js</li>
             <li>~ Tailwind Css</li>
             <li>~ Framermotion</li>
+            <li>~ Gsap</li>
+            <li>~ Gsap Scroll Trigger</li>
           </ul>
         </div>
         {/* refarence */}

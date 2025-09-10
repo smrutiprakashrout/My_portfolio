@@ -43,6 +43,7 @@ export const metadata: Metadata = {
     "Fullstack Developer",
     "DevOps Engineer",
     "Linux Administrator",
+    "smruti on linux",
     
     // Secondary keywords  
     "React Developer",

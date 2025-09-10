@@ -25,10 +25,4 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog main page -->
-  <url>
-    <loc>https://kernelhub.vercel.app/</loc>
-    <priority>0.7</priority>
-  </url>
-
 </urlset>
