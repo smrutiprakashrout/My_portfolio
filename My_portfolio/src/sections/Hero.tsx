@@ -1,6 +1,7 @@
 "use client"
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
+import { SplitText } from "gsap/SplitText";
 import memojiImage from "@/assets/images/memoji-computer.png";
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
@@ -24,6 +25,9 @@ export const HeroSection = () => {
   const backgroundRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Register SplitText plugin
+    gsap.registerPlugin(SplitText);
+    
     const ctx = gsap.context(() => {
       // Check if all refs are available
       if (!backgroundRef.current || !ringsRef.current || !memojiRef.current || 
@@ -31,6 +35,12 @@ export const HeroSection = () => {
           !descriptionRef.current || !buttonsRef.current || !orbitsRef.current) {
         return;
       }
+
+      // Split the title text into characters
+      const titleSplit = new SplitText(titleRef.current, {
+        type: "chars",
+        charsClass: "title-char"
+      });
 
       // Create master timeline
       const tl = gsap.timeline({ delay: 0.5 });
@@ -41,7 +51,6 @@ export const HeroSection = () => {
         duration: 2,
         ease: "power2.inOut"
       })
-
       // Rings dramatic entrance
       .from(ringsRef.current.children, {
         scale: 0,
@@ -54,7 +63,6 @@ export const HeroSection = () => {
           from: "center"
         }
       }, "-=1.5")
-
       // Memoji entrance with bounce
       .from(memojiRef.current, {
         opacity: 0,
@@ -64,7 +72,6 @@ export const HeroSection = () => {
         duration: 1.2,
         ease: "back.out(2.5)"
       }, "-=0.8")
-
       // Status badge slide in
       .from(statusRef.current, {
         opacity: 0,
@@ -73,36 +80,50 @@ export const HeroSection = () => {
         duration: 0.8,
         ease: "power3.out"
       }, "-=0.3")
-
       // Greeting text
       .from(greetingRef.current, {
         opacity: 0,
         duration: 0.8,
         ease: "power2.out"
       }, "-=0.2")
-
-      // Title dramatic reveal
-      .from(titleRef.current, {
+      // Title character-by-character animation
+      .from(titleSplit.chars, {
         opacity: 0,
-        y: 80,
-        duration: 1.2,
-        ease: "power4.out"
+        y: 50,
+        rotationX: -90,
+        transformOrigin: "50% 50% -50px",
+        duration: 0.8,
+        ease: "back.out(1.2)",
+        stagger: {
+          amount: 1.2,
+          from: "start"
+        }
       }, "-=0.4")
-
       // Description fade
       .from(descriptionRef.current, {
         opacity: 0,
         duration: 1,
         ease: "power3.out"
       }, "-=0.6")
-
-      // Buttons entrance
-      .from(buttonsRef.current, {
+      // Buttons entrance from different directions
+      .from(buttonsRef.current.children[0], {
         opacity: 0,
+        x: -100,
+        y: 30,
+        rotation: -10,
+        scale: 0.8,
         duration: 0.8,
-        ease: "power3.out"
+        ease: "back.out(1.7)"
       }, "-=0.4")
-
+      .from(buttonsRef.current.children[1], {
+        opacity: 0,
+        x: 100,
+        y: -30,
+        rotation: 10,
+        scale: 0.8,
+        duration: 0.8,
+        ease: "back.out(1.7)"
+      }, "-=0.6")
       // Orbits floating in
       .from(orbitsRef.current.children, {
         opacity: 0,
@@ -140,6 +161,27 @@ export const HeroSection = () => {
         });
       }
 
+      // Title characters hover effect
+      titleSplit.chars.forEach((char: Element) => {
+        char.addEventListener('mouseenter', () => {
+          gsap.to(char, {
+            scale: 1.2,
+            color: "#10b981",
+            duration: 0.3,
+            ease: "power2.out"
+          });
+        });
+        
+        char.addEventListener('mouseleave', () => {
+          gsap.to(char, {
+            scale: 1,
+            color: "inherit",
+            duration: 0.3,
+            ease: "power2.out"
+          });
+        });
+      });
+
       // Buttons hover readiness
       const buttons = buttonsRef.current.children;
       Array.from(buttons).forEach(button => {
@@ -150,7 +192,7 @@ export const HeroSection = () => {
             ease: "power2.out"
           });
         });
-
+        
         button.addEventListener('mouseleave', () => {
           gsap.to(button, {
             scale: 1,
@@ -180,11 +222,11 @@ export const HeroSection = () => {
 
       window.addEventListener('scroll', handleScroll);
 
-      // Cleanup scroll listener
+      // Cleanup function
       return () => {
         window.removeEventListener('scroll', handleScroll);
+        titleSplit.revert(); // Clean up SplitText
       };
-
     }, containerRef);
 
     return () => ctx.revert();
@@ -207,7 +249,7 @@ export const HeroSection = () => {
             }}
           ></div>
         </div>
-
+        
         {/* rings  */}
         <div ref={ringsRef}>
           <div className="size-[620px] hero-ring"></div>
@@ -215,7 +257,7 @@ export const HeroSection = () => {
           <div className="size-[1020px] hero-ring"></div>
           <div className="size-[1220px] hero-ring"></div>
         </div>
-
+        
         <div ref={orbitsRef}>
           <HeroOrbit size={430} rotation={-15} shouldOrbit spinduration="30s">
             <SpsrkleIcon className="size-8 text-emerald-300/20" />
@@ -249,7 +291,7 @@ export const HeroSection = () => {
           </HeroOrbit>
         </div>
       </div>
-
+      
       <div className="container sm: -mt-6">
         <div className="flex flex-col items-center">
           <Image ref={memojiRef} src={memojiImage} className="size-[100px]" alt=""></Image>
@@ -262,17 +304,22 @@ export const HeroSection = () => {
             </div>
           </div>
         </div>
+        
         <div className="text-center flex px-6 gap-3">
-          <span ref={greetingRef} className="text-white/80 font-bold font-sans text-sm pt-2 w-full">👋🏻 Hey, I&apos;m Smruti, a Software and System Engineer based in India.</span>
+          <span ref={greetingRef} className="text-white/80 font-bold font-sans text-sm pt-2 w-full">
+            👋🏻 Hey, I&apos;m Smruti, a Software and System Engineer based in India.
+          </span>
         </div>
+        
         <div className="max-w-lg mx-auto">
           <h1 ref={titleRef} className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-            From Code to Cloud, I Deliver End-to-End Solutions
+            From Code to Cloud, I Deliver End-to-End <br/> Solutions
           </h1>
           <p ref={descriptionRef} className="mt-4 text-center text-white/60 md:text-lg text-sm px-4">
             I build scalable, secure, and high-performance applications. From web to cross-platform apps, I deliver seamless user experiences. With DevOps & Linux expertise, I cut deployment time and boost reliability.
           </p>
         </div>
+        
         <div ref={buttonsRef} className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
           <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl z-0">
             <span className="font-semibold cursor-pointer">
