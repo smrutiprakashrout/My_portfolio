@@ -1,7 +1,16 @@
 import Sec_Header from "@/components/Sec_Header";
+import pixcelImage from "@/assets/images/bg/pixels.png";
 const Madewith = () => {
   return (
-    <div className="py-16 lg:py-24">
+    <div className="py-16 lg:py-24 relative z-0 overflow-x-clip">
+        <div className="absolute inset-0 h-full w-[100vw] [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
+        <div
+          className="absolute inset-0 -z-30 opacity-5"
+          style={{
+            backgroundImage: `url(${pixcelImage.src})`,
+          }}
+        ></div>
+      </div>
       <div className="container">
         <Sec_Header
           eyebrow="Made With Focus"

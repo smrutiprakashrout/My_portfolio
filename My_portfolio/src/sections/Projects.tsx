@@ -6,8 +6,9 @@ import Image from "next/image";
 import CheckIcon from "@/assets/icons/check-circle.svg";
 import Arrowup from "@/assets/icons/arrow-up-right.svg";
 import GrainImage from "@/assets/images/grain.jpg";
+import stairsImage from "@/assets/images/bg/stairs.png";
 // ----------------------------project-----------------------
-import CrossBridge from "@/assets/images/projects/crossbridge.png"
+import CrossBridge from "@/assets/images/projects/crossbridge.png";
 import Nebulashade from "@/assets/images/projects/nebulashade.png";
 import Lifehrsision from "@/assets/images/projects/lifehrfusion.png";
 import Devnest from "@/assets/images/projects/devnest.png";
@@ -18,7 +19,6 @@ import Resturant from "@/assets/images/projects/resturant.png";
 import Weather from "@/assets/images/projects/weather.png";
 import { FaDownload } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
-
 
 const portfolioProjects = [
   {
@@ -58,7 +58,10 @@ const portfolioProjects = [
     title: "System Continuity & Ecosystem",
     results: [
       { title: "Bridging Android and Linux into One Connected Ecosystem." },
-      { title: "Your Airdrop, Continuity, and Device Sync — Reimagined for Linux." },
+      {
+        title:
+          "Your Airdrop, Continuity, and Device Sync — Reimagined for Linux.",
+      },
     ],
     link: "",
     image: CrossBridge,
@@ -135,7 +138,20 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <section id="project" className="pb-16 lg:py-24">
+    // -------------- bg ----------------------------
+    <section
+      id="project"
+      className="pb-16 lg:py-24 relative z-0 overflow-x-clip"
+    >
+      <div className="absolute inset-0 h-full w-[100vw] [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
+        <div
+          className="absolute inset-0 -z-30 opacity-5"
+          style={{
+            backgroundImage: `url(${stairsImage.src})`,
+          }}
+        ></div>
+      </div>
+      {/* ------------------------------------ */}
       <div className="container">
         <div className="flex justify-center">
           <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text flex justify-center">
@@ -182,26 +198,36 @@ export const ProjectsSection = () => {
                     ))}
                   </ul>
                   <div className="flex fex-row justify-between overflow-hidden">
-                    {project.isweb == true ?
+                    {project.isweb == true ? (
                       <a href={project.link}>
                         <button className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-950 h-12 w-auto md:w-auto px-6 rounded-xl inline-flex items-center justify-center gap-2 mt-8">
-                          <span className="lg:text-[1rem] md:text[1rem] text-[0.6rem]">View Webpage</span>
+                          <span className="lg:text-[1rem] md:text[1rem] text-[0.6rem]">
+                            View Webpage
+                          </span>
                           <Arrowup className="size-4" />
                         </button>
                       </a>
-                      : <></>}
-                    {project.isapp == true ?
+                    ) : (
+                      <></>
+                    )}
+                    {project.isapp == true ? (
                       <a href={project.link}>
                         <button className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-950 h-12 lg:w-full md:w-full w-full lg:px-6 md:px-6 px-4 rounded-xl inline-flex items-center justify-center gap-2 mt-8">
-                          <span className="lg:text-[1rem] md:text[1rem] text-[0.6rem]">Download App</span>
+                          <span className="lg:text-[1rem] md:text[1rem] text-[0.6rem]">
+                            Download App
+                          </span>
                           <FaDownload className="size-4" />
                         </button>
                       </a>
-                      : <></>}
+                    ) : (
+                      <></>
+                    )}
                     <a href={project.github}>
                       <button className="bg-white text-gray-950 h-12 lg:w-full md:w-auto w-auto lg:px-6 md:px-6 px-4 rounded-xl inline-flex items-center justify-center gap-2 mt-8">
                         <FaGithub className="size-4" />
-                        <span className="lg:text-[1rem] md:text[1rem] text-[0.6rem]">View Git Repo</span>
+                        <span className="lg:text-[1rem] md:text[1rem] text-[0.6rem]">
+                          View Git Repo
+                        </span>
                       </button>
                     </a>
                   </div>

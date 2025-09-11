@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Sec_Header from "@/components/Sec_Header";
 import { Card } from "@/components/Card";
 import StarIcon from "@/assets/icons/star.svg";
@@ -12,13 +12,33 @@ import CssIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import { TechIcon } from "@/components/TechIcon";
-
-import MapImage from "@/assets/images/map.png";
+import pixcelImage from "@/assets/images/bg/pixels.png";
+import MapImage from "@/assets/images/map.jpg";
 import SmileImage from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolBoxItems } from "@/components/ToolboxItem";
-import { motion } from 'framer-motion'
-import { Bash, NodeJs, Rust, Kotlin, Dart, TailwindCSS, MongoDB, Flutter, PostgresSQL, Swift, ArchLinux, AWS, Docker, Kubernetes, Jenkins, Ansible, Terraform, Prometheus } from "../assets/icons/index.js"
+import { motion } from "framer-motion";
+import Linux from "@/assets/images/linuxp.svg";
+import {
+  Bash,
+  NodeJs,
+  Rust,
+  Kotlin,
+  Dart,
+  TailwindCSS,
+  MongoDB,
+  Flutter,
+  PostgresSQL,
+  Swift,
+  ArchLinux,
+  AWS,
+  Docker,
+  Kubernetes,
+  Jenkins,
+  Ansible,
+  Terraform,
+  Prometheus,
+} from "../assets/icons/index.js";
 const toolboxItems = [
   {
     title: "Bash",
@@ -104,9 +124,7 @@ const toolboxItems = [
     title: "Github",
     IconType: GithubIcon,
   },
-
 ];
-
 
 const hobbies = [
   {
@@ -157,7 +175,17 @@ const hobbies = [
 export const AboutSection = () => {
   const constraintRef = useRef(null);
   return (
-    <div className="py-20 lg:py-28">
+    // -------------- bg ----------------------------
+    <div className="py-20 lg:py-28 h-full relative z-0 overflow-x-clip">
+      <div className="absolute inset-0 h-full w-[100vw] [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
+        <div
+          className="absolute inset-0 -z-30 opacity-5"
+          style={{
+            backgroundImage: `url(${pixcelImage.src})`,
+          }}
+        ></div>
+      </div>
+      {/* ------------------------------------ */}
       <div className="container">
         <Sec_Header
           eyebrow="About Me"
@@ -168,15 +196,16 @@ export const AboutSection = () => {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
             <Card className="h-[320px]  md:col-span-2 lg:col-span-1">
               <CardHeader
-                title="My Reads"
-                description="Explore the books shaping my perpectives."
+                title="My Workflow"
+                description="Explore the OS shaping my perpectives."
               />
 
-              <div className="w-40 mx-auto mt-2 md:mt-0">
-                <Image src={BookImage} alt="" className="" />
+              <div className="scale-[0.35] lg:-translate-y-[8.5rem] md:-translate-y-[8.5rem] -translate-y-[6.5rem] mx-auto mt-0 md:mt-0">
+                <Linux />
+                {/* <Image src={BookImage} alt="" className="" /> */}
               </div>
             </Card>
-            <Card className="h-[320px] md:col-span-3 lg:col-span-2" >
+            <Card className="h-[320px] md:col-span-3 lg:col-span-2">
               <div>
                 <CardHeader
                   title="My Toolbox"
@@ -186,9 +215,11 @@ export const AboutSection = () => {
                 />
               </div>
 
-              <ToolBoxItems items={toolboxItems}
+              <ToolBoxItems
+                items={toolboxItems}
                 className=""
-                itemWrapperClassName="animate-move-left [animation-duration:70s]" />
+                itemWrapperClassName="animate-move-left [animation-duration:70s]"
+              />
               <ToolBoxItems
                 items={toolboxItems}
                 className="mt-6"

@@ -1,8 +1,17 @@
 "use client"
 import { Roadmap } from "@/assets/images";
+import codeImage from "@/assets/images/bg/crypto.png"
 const Quickabout = () => {
   return (
-    <section id="project" className="pb-2 lg:py-10">
+    <section id="project" className="pb-2 lg:py-10 relative z-0 overflow-x-clip">
+        <div className="absolute inset-0 h-full w-[100vw] [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
+        <div
+          className="absolute inset-0 -z-30 opacity-5"
+          style={{
+            backgroundImage: `url(${codeImage.src})`,
+          }}
+        ></div>
+      </div>
       <div className="container">
         <div className="flex justify-center">
           <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text flex justify-center">

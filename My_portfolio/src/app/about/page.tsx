@@ -4,13 +4,22 @@ import LinkdinIcon from "../../assets/icons/LinkedIn.svg";
 import Github from "../../assets/icons/github.svg";
 import Arrowdown from "../../assets/icons/arrow-down.svg";
 import { Header } from "@/sections/Header";
+import pixcelImage from "@/assets/images/bg/pixels.png";
 import Image from "next/image";
 const About = () => {
   return (
-    <div>
+    <div className="py-20 lg:py-28 h-full relative z-0 overflow-x-clip">
+          <div className="absolute inset-0 h-full w-[100vw] [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
+              <div
+                className="absolute inset-0 -z-30 opacity-5"
+                style={{
+                  backgroundImage: `url(${pixcelImage.src})`,
+                }}
+              ></div>
+            </div>
       <Header />
       {/* Image bg */}
-      <div className="lg:fixed md:fixed absolute -z-10 lg:top-2 md:top-2 top-20 lg:w-[40%] md:w-[40%] w-[90%] lg:h-[100%] md:h-[100%] h-[40%] rounded-tr-full rounded-br-full overflow-hidden">
+      <div className="lg:fixed md:fixed absolute -z-1 lg:top-2 md:top-2 top-20 lg:w-[40%] md:w-[40%] w-[90%] lg:h-[100%] md:h-[100%] h-[9%] rounded-tr-full rounded-br-full overflow-hidden">
         <Image
           src={Selfpic}
           alt=""
