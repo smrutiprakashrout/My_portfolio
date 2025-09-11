@@ -1,14 +1,14 @@
 "use client"
 import { Roadmap } from "@/assets/images";
-import codeImage from "@/assets/images/bg/crypto.png"
+import stairsImage from "@/assets/images/bg/stairs.png";
 const Quickabout = () => {
   return (
     <section id="project" className="pb-2 lg:py-10 relative z-0 overflow-x-clip">
         <div className="absolute inset-0 h-full w-[100vw] [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
         <div
-          className="absolute inset-0 -z-30 opacity-5"
+          className="absolute inset-0 -z-30 opacity-[0.02]"
           style={{
-            backgroundImage: `url(${codeImage.src})`,
+            backgroundImage: `url(${stairsImage.src})`,
           }}
         ></div>
       </div>

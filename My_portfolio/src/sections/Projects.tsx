@@ -6,7 +6,8 @@ import Image from "next/image";
 import CheckIcon from "@/assets/icons/check-circle.svg";
 import Arrowup from "@/assets/icons/arrow-up-right.svg";
 import GrainImage from "@/assets/images/grain.jpg";
-import stairsImage from "@/assets/images/bg/stairs.png";
+
+import codeImage from "@/assets/images/bg/crypto.png";
 // ----------------------------project-----------------------
 import CrossBridge from "@/assets/images/projects/crossbridge.png";
 import Nebulashade from "@/assets/images/projects/nebulashade.png";
@@ -147,7 +148,7 @@ export const ProjectsSection = () => {
         <div
           className="absolute inset-0 -z-30 opacity-5"
           style={{
-            backgroundImage: `url(${stairsImage.src})`,
+            backgroundImage: `url(${codeImage.src})`,
           }}
         ></div>
       </div>

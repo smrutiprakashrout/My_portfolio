@@ -200,8 +200,8 @@ export const AboutSection = () => {
                 description="Explore the OS shaping my perpectives."
               />
 
-              <div className="scale-[0.35] lg:-translate-y-[8.5rem] md:-translate-y-[8.5rem] -translate-y-[6.5rem] mx-auto mt-0 md:mt-0">
-                <Linux />
+              <div className="animate-[lowbounce_6s_infinite] mx-auto mt-0 md:mt-0">
+                <Linux className=" scale-[0.3] lg:-translate-y-[6rem] md:-translate-y-[6rem] -translate-y-[4rem]"/>
                 {/* <Image src={BookImage} alt="" className="" /> */}
               </div>
             </Card>

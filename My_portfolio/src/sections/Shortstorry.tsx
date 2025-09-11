@@ -282,7 +282,7 @@ const StoryScroll = () => {
 
         {/* Grid Pattern */}
         <div 
-          className="absolute inset-0 opacity-10 h-[150%]"
+          className="absolute inset-0 opacity-5 h-[150%]"
           style={{
             backgroundImage: `
               linear-gradient(rgba(59, 130, 246, 1) 1px, transparent 1px),
