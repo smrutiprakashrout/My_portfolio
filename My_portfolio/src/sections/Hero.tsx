@@ -12,19 +12,26 @@ import SpsrkleIcon from "@/assets/icons/sparkle.svg";
 import Link from "next/link";
 
 export const HeroSection = () => {
-  const containerRef = useRef(null);
-  const memojiRef = useRef(null);
-  const statusRef = useRef(null);
-  const greetingRef = useRef(null);
-  const titleRef = useRef(null);
-  const descriptionRef = useRef(null);
-  const buttonsRef = useRef(null);
-  const ringsRef = useRef(null);
-  const orbitsRef = useRef(null);
-  const backgroundRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const memojiRef = useRef<HTMLImageElement>(null);
+  const statusRef = useRef<HTMLDivElement>(null);
+  const greetingRef = useRef<HTMLSpanElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const descriptionRef = useRef<HTMLParagraphElement>(null);
+  const buttonsRef = useRef<HTMLDivElement>(null);
+  const ringsRef = useRef<HTMLDivElement>(null);
+  const orbitsRef = useRef<HTMLDivElement>(null);
+  const backgroundRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      // Check if all refs are available
+      if (!backgroundRef.current || !ringsRef.current || !memojiRef.current || 
+          !statusRef.current || !greetingRef.current || !titleRef.current || 
+          !descriptionRef.current || !buttonsRef.current || !orbitsRef.current) {
+        return;
+      }
+
       // Create master timeline
       const tl = gsap.timeline({ delay: 0.5 });
 
@@ -121,14 +128,17 @@ export const HeroSection = () => {
       });
 
       // Status badge pulse
-      gsap.to(statusRef.current.querySelector('.bg-green-500'), {
-        scale: 1.1,
-        duration: 2,
-        ease: "sine.inOut",
-        yoyo: true,
-        repeat: -1,
-        delay: 4
-      });
+      const statusGreenDot = statusRef.current.querySelector('.bg-green-500');
+      if (statusGreenDot) {
+        gsap.to(statusGreenDot, {
+          scale: 1.1,
+          duration: 2,
+          ease: "sine.inOut",
+          yoyo: true,
+          repeat: -1,
+          delay: 4
+        });
+      }
 
       // Buttons hover readiness
       const buttons = buttonsRef.current.children;
@@ -155,13 +165,17 @@ export const HeroSection = () => {
         const scrolled = window.pageYOffset;
         const rate = scrolled * -0.5;
         
-        gsap.set(ringsRef.current, {
-          transform: `translateY(${rate}px)`
-        });
+        if (ringsRef.current) {
+          gsap.set(ringsRef.current, {
+            transform: `translateY(${rate}px)`
+          });
+        }
         
-        gsap.set(orbitsRef.current, {
-          transform: `translateY(${rate * 0.3}px)`
-        });
+        if (orbitsRef.current) {
+          gsap.set(orbitsRef.current, {
+            transform: `translateY(${rate * 0.3}px)`
+          });
+        }
       };
 
       window.addEventListener('scroll', handleScroll);
