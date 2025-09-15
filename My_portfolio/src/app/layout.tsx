@@ -25,11 +25,11 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://devsmruti.vercel.app'),
+  metadataBase: new URL('https://smrutiprakashrout.vercel.app'),
   
   title: {
     default: "Smruti Prakash Rout | Software Developer Portfolio",
-    template: "%s | DevSmruti" // For page-specific titles
+    template: "%s | smrutiprakashrout" // For page-specific titles
   },
   
   description:
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   keywords: [
     // Primary keywords
     "Smruti Prakash Rout",
-    "DevSmruti",
+    "Smruti",
     "Software Developer India",
     "Fullstack Developer",
     "DevOps Engineer",
@@ -86,9 +86,9 @@ export const metadata: Metadata = {
     "Machine Learning Engineer",
   ],
   
-  authors: [{ name: "Smruti Prakash Rout", url: "https://devsmruti.vercel.app" }],
+  authors: [{ name: "Smruti Prakash Rout", url: "https://smrutiprakashrout.vercel.app" }],
   creator: "Smruti Prakash Rout",
-  publisher: "DevSmruti",
+  publisher: "smrutiprakashrout",
   
   robots: {
     index: true,
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
     },
   },
   
-  applicationName: "DevSmruti Portfolio",
+  applicationName: "smrutiprakashrout Portfolio",
   
   // Updated favicon configuration with new icons
   icons: {
@@ -125,8 +125,8 @@ export const metadata: Metadata = {
   // openGraph: {
   //   type: "website",
   //   locale: "en_US",
-  //   url: "https://devsmruti.vercel.app",
-  //   siteName: "DevSmruti - Smruti Prakash Rout Portfolio",
+  //   url: "https://smrutiprakashrout.vercel.app",
+  //   siteName: "smrutiprakashrout - Smruti Prakash Rout Portfolio",
   //   title: "Smruti Prakash Rout | Expert Software Developer & DevOps Engineer",
   //   description:
   //     "Explore the portfolio of Smruti Prakash Rout - Expert in full-stack development, DevOps automation, Linux administration, and cloud solutions. Based in India.",
@@ -135,7 +135,7 @@ export const metadata: Metadata = {
   //       url: "/og-image.png", // Create a proper OG image (1200x630)
   //       width: 1200,
   //       height: 630,
-  //       alt: "DevSmruti - Smruti Prakash Rout Portfolio",
+  //       alt: "smrutiprakashrout - Smruti Prakash Rout Portfolio",
   //       type: "image/png",
   //     },
   //   ],
@@ -154,7 +154,7 @@ export const metadata: Metadata = {
   
   // Additional SEO metadata
   alternates: {
-    canonical: "https://devsmruti.vercel.app",
+    canonical: "https://smrutiprakashrout.vercel.app",
   },
   
   category: 'technology',
@@ -183,20 +183,20 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": ["Person", "WebSite"],
               name: "Smruti Prakash Rout",
-              alternateName: "DevSmruti",
-              url: "https://devsmruti.vercel.app",
-              image: "https://devsmruti.vercel.app/profile-photo.jpg", // Add your photo
+              alternateName: "smrutiprakashrout",
+              url: "https://smrutiprakashrout.vercel.app",
+              image: "https://smrutiprakashrout.vercel.app/smruti_prakash_rout_picture.jpg", // Add your photo
               sameAs: [
                 // Add your social media profiles
-                "https://github.com/smrutiofficial",
+                "https://github.com/smrutiprakashrout",
                 "https://www.linkedin.com/in/smrutiprakashrout",
-                "https://www.instagram.com/smruti_on_linux/",
+                "https://www.instagram.com/smrutiprakashrout",
                 "https://youtube.com/@smrutionlinux"
               ],
               jobTitle: "Software Developer",
               worksFor: {
                 "@type": "Organization",
-                name: "DevSmruti", // or your company
+                name: "smrutiprakashrout", // or your company
               },
               address: {
                 "@type": "PostalAddress",
