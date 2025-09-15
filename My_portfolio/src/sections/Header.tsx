@@ -9,7 +9,7 @@ export const Header = () => {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Blog", href: "https://kernelhub.vercel.app/" },
+    { name: "Blog", href: "https://kernelhub-smrutiprakashrout.vercel.app/" },
     { name: "Contact", href: "/contact" },
   ];
 
