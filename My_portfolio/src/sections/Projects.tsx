@@ -1,19 +1,23 @@
+"use client";
 import darkSaasLandingPage from "@/assets/images/—Pngtree—macbook pro 16_9011850.png";
 import lightSaasLandingPage from "@/assets/images/weather.png";
 import aiStartupLandingPage from "@/assets/images/photoport.png";
 import { Result } from "postcss";
+import { useState } from "react";
 import Image from "next/image";
 import CheckIcon from "@/assets/icons/check-circle.svg";
 import Arrowup from "@/assets/icons/arrow-up-right.svg";
 import GrainImage from "@/assets/images/grain.jpg";
 
 import codeImage from "@/assets/images/bg/crypto.png";
+import Infoicon from "@/assets/icons/info-circle.svg";
 // ----------------------------project-----------------------
 import CrossBridge from "@/assets/images/projects/crossbridge.png";
 import Nebulashade from "@/assets/images/projects/nebulashade.png";
 import Lifehrsision from "@/assets/images/projects/lifehrfusion.png";
 import Devnest from "@/assets/images/projects/devnest.png";
 import Kernelhub from "@/assets/images/projects/kernelhub.png";
+import Drlinux from "@/assets/images/projects/drlinux.png";
 import Photography from "@/assets/images/projects/photography.png";
 import Resturant from "@/assets/images/projects/resturant.png";
 
@@ -30,6 +34,7 @@ const portfolioProjects = [
       { title: "Enabled full desktop theming synced with wallpaper colors" },
       { title: "Reduced setup time by 60% with one-click theme restore" },
     ],
+    techstack: "Flutter, Linux, Gnome, Bash, Ui/Ux Design, Python, VirtualBox, Algorithm",
     link: "",
     image: Nebulashade,
     isapp: true,
@@ -47,6 +52,7 @@ const portfolioProjects = [
           "Integrated essential tools, extensions, Apps and configs out-of-the-box",
       },
     ],
+    techstack: "Flutter, Linux, Gnome, Bash, Ui/Ux Design, VirtualBox",
     link: "",
     image: Devnest,
     isapp: true,
@@ -64,6 +70,7 @@ const portfolioProjects = [
           "Your Airdrop, Continuity, and Device Sync — Reimagined for Linux.",
       },
     ],
+    techstack: "Linux, Android, Flutter, Socket, Bash, TCP, MDNS, SSL/TLS, SSH",
     link: "",
     image: CrossBridge,
     isapp: true,
@@ -84,6 +91,7 @@ const portfolioProjects = [
           "Improved employee self-service with real-time profile and leave updates",
       },
     ],
+    techstack: "Next.js, Express.js, Node.js, Ui/Ux, Mongodb, Docker, Nginx, Git, Github, Vercel",
     link: "",
     image: Lifehrsision,
     isapp: false,
@@ -101,11 +109,30 @@ const portfolioProjects = [
       },
       { title: "Engaged 5K+ monthly readers from the open-source community" },
     ],
+    techstack: "Next.js, Next-Backend, Ui/Ux, Mongodb, Docker, Nginx, Git, Github, Vercel, Markdown",
     link: "http://kernelhub.vercel.app/ ",
     image: Kernelhub,
     isapp: false,
     isweb: true,
     github: "https://github.com/smrutiofficial/Kernel_Hub",
+  },
+  {
+    name: "DR. Linux",
+    year: "2024",
+    title: "Linux App Management Software",
+    results: [
+      {
+        title:
+          "Enabled app installation, uninstallation, and updates via Flatpak and APT",
+      },
+      { title: "Integrated app search for quick discovery and management" },
+    ],
+    techstack: "Python, Tkinter, Bash, Linux, API",
+    link: " ",
+    image: Drlinux,
+    isapp: true,
+    isweb: false,
+    github: "https://github.com/smrutiprakashrout/dr-linux",
   },
   {
     name: "Bhabyasight",
@@ -115,6 +142,7 @@ const portfolioProjects = [
       { title: "Enhanced visual presentation with responsive galleries" },
       { title: "Improved page load time by 50%" },
     ],
+    techstack: "Html5, css3, JavaScript, Gsap, Gsap Scroll-Trigger",
     link: "https://bhabyaphotography.vercel.app/",
     image: Photography,
     isapp: false,
@@ -129,6 +157,7 @@ const portfolioProjects = [
       { title: "Reduced order processing time by 45%" },
       { title: "Digitized kitchen workflows and improved analytics" },
     ],
+    techstack: "Html5, css3, JavaScript",
     link: "https://food-lane-puce.vercel.app/",
     image: Resturant,
     isapp: false,
@@ -138,6 +167,17 @@ const portfolioProjects = [
 ];
 
 export const ProjectsSection = () => {
+  // Changed: Use an object to track which project popup is open
+  const [openPopup, setOpenPopup] = useState(null);
+
+  const handleOpenPopup = (projectIndex) => {
+    setOpenPopup(projectIndex);
+  };
+
+  const handleClosePopup = () => {
+    setOpenPopup(null);
+  };
+
   return (
     // -------------- bg ----------------------------
     <section
@@ -179,10 +219,60 @@ export const ProjectsSection = () => {
               ></div>
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
-                  <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text gap-2">
-                    <span>{project.name}</span>
-                    <span>{project.year}</span>
+                  <div className="">
+                    <div className="flex flex-row justify-between w-full tracking-widest  ">
+                      <div className=" inline-flex gap-2 w-fit bg-gradient-to-r from-emerald-300 to-sky-400 font-bold uppercase text-sm text-transparent bg-clip-text">
+                        <span>{project.name}</span>
+                        <span>{project.year}</span>
+                      </div>
+                      <div className="w-fit">
+                        {/* popup to open */}
+                        <button onClick={() => handleOpenPopup(projectIndex)}>
+                          <Infoicon className="size-8 cursor-pointer" />
+                        </button>
+                      </div>
+                    </div>
                   </div>
+                  {/* specific project's popup should be open */}
+                  {openPopup === projectIndex && (
+                    <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                      <div className="bg-gray-800 p-12 rounded-2xl shadow-xl lg:w-[50vw] md:w-[50vw] w-[90vw] h-[50vh] relative">
+                        <div
+                          className="absolute inset-0 -z-1 opacity-5"
+                          style={{ backgroundImage: `url(${GrainImage.src})` }}
+                        ></div>
+                        <button
+                          onClick={handleClosePopup}
+                          className="absolute top-3 right-3 text-red-600 m-6 text-4xl font-bold hover:text-black"
+                        >
+                          ✕
+                        </button>
+                        <h2 className="text-lg font-bold mb-2 text-white">
+                          {project.name}
+                        </h2>
+                        <h3 className="text-md font-semibold mb-4 text-gray-400">
+                          {project.title}
+                        </h3>
+                        <div className="text-white lg:flex lg:flex-col hidden">
+                          <h4 className="font-semibold mb-2">Key Results:</h4>
+                          <ul className="list-disc pl-5 space-y-1">
+                            {project.results.map((result, index) => (
+                              <li key={index} className="text-sm text-gray-400">
+                                {result.title}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div className="">
+                          <h4 className="font-semibold my-4">
+                            Technology Used:
+                          </h4>
+                          <p className="text-gray-400">{project.techstack}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  {/* ---------------------- */}
                   <h3 className="font-serif text-2xl mt-2 md:text-4xl md:mt-5">
                     {project.title}
                   </h3>
