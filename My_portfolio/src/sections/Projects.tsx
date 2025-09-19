@@ -167,8 +167,8 @@ const portfolioProjects = [
 ];
 
 export const ProjectsSection = () => {
-  // Changed: Use an object to track which project popup is open
-  const [openPopup, setOpenPopup] = useState(null);
+  // Use an object to track which project popup is open
+  const [openPopup, setOpenPopup] = useState<number | null>(null);
 
   const handleOpenPopup = (projectIndex:number) => {
     setOpenPopup(projectIndex);
